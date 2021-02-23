@@ -1,6 +1,6 @@
 <?php
 /**
- * 这是翻译包导入页面的HTML
+ * Translation package import HTML
  *
  * @package wpfanyi-import
  */

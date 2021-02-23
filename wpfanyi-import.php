@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
 
 add_action('init', function () {
     if (is_admin() && current_user_can( 'install_plugins' )) {
-        /** 载入核心功能 */
+        /** Load core */
         require_once 'core.php';
         new WPfanyi_Import();
     }

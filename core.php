@@ -2,35 +2,35 @@
 /**
  * Class WPfanyi_Import
  *
- * 翻译包导入小工具核心类
+ * Core class
  *
  * @package wpfanyi-import
  */
 class WPfanyi_Import {
 
     /**
-     * @var string 翻译导入的方式 file or url
+     * @var string Translation package import method. value:"file" or "url"
      *
      * @since 1.0.0
      */
     private $trans_import_method = '';
 
     /**
-     * @var string 用户选择的翻译包类型 plugin or theme
+     * @var string Translation package type. value:"plugin" or "theme"
      *
      * @since 1.0.0
      */
     private $trans_type = '';
 
     /**
-     * @var array 用户上传的翻译包信息
+     * @var array Translation package information uploaded by users
      *
      * @since 1.0.0
      */
     private $trans_zip = [];
 
     /**
-     * @var string 翻译包的URL
+     * @var string Translation package URL
      *
      * @since 1.0.0
      */
@@ -38,7 +38,7 @@ class WPfanyi_Import {
 
     public function __construct() {
         /**
-         * 注册菜单
+         * Register menu
          */
         add_action(is_multisite() ? 'network_admin_menu' : 'admin_menu', function () {
             add_submenu_page(
@@ -53,14 +53,12 @@ class WPfanyi_Import {
     }
 
     /**
-     * 输出翻译导入页面表单并处理用户提交的表单
+     * Output and process translation import form
      *
      * @since 1.0.0
      */
     public function wpfanyi_import_page() {
-        /**
-         * 若是POST请求则处理翻译包导入工作
-         */
+        /** If it is a post request, the form value is processed */
         if (isset($_SERVER['REQUEST_METHOD']) && 'POST' === strtoupper($_SERVER['REQUEST_METHOD'])) {
             $this->trans_import_method = @$_POST['trans_import_method'];
             $this->trans_type = @$_POST['trans_type'];
@@ -80,7 +78,7 @@ class WPfanyi_Import {
     }
 
     /**
-     * 注册设置页依赖的css及js
+     * Register CSS and JS for forms
      */
     public function register_css_and_js() {
         echo <<<EOT
@@ -173,11 +171,11 @@ EOT;
     }
 
     /**
-     * 用于校验用户传递来的数据
+     * Verify the data submitted by the user
      *
      * @since 1.0.0
      *
-     * @return bool 是否校验通过
+     * @return bool true on success or false on failure.
      */
     private function data_verify() {
         if (!current_user_can( 'install_plugins' ) || !(isset($_POST['_wpnonce']) &&
@@ -222,11 +220,11 @@ EOT;
     }
 
     /**
-     * 执行翻译包导入
+     * Handling translation package import
      *
      * @since 1.0.0
      *
-     * @return bool 是否导入成功
+     * @return bool true on success or false on failure.
      */
     private function import_trans() {
         $trans_dir = WP_CONTENT_DIR . '/languages/' . $this->trans_type . 's';
@@ -244,7 +242,10 @@ EOT;
         }
 
         if(!is_writable($trans_dir)) {
-            /** 当发现翻译目录不可写后尝试创建目录，若创建失败则证明是文件系统权限存在问题 */
+            /**
+             * When it is found that the translation directory isn't writable, try to create a new directory.
+             * If it fails, it proves that there is a problem with the file system permissions.
+             */
             if (!mkdir($trans_dir, 0775, true)) {
                 /* translators: %s: 不可写的系统翻译存储目录的具体路径 */
                 $this->error_msg(sprintf(__('该WordPress的翻译存储目录不可写：%s', 'wpfanyi-import'), $trans_dir));
@@ -268,29 +269,29 @@ EOT;
         $zip->extractTo($trans_dir);
         $zip->close();
 
-        /** 对于使用download_url()下载的临时文件使用后必须删除，但用户通过表单上传的则有可能因为权限问题删除失败，不过这无关紧要 */
+        /** Try to delete the temporary file after all operations */
         @unlink($trans_zip_file);
 
         return true;
     }
 
     /**
-     * 向页面输出状态为成功的消息
+     * Print success message
      *
      * @since 1.0.0
      *
-     * @param string $msg 要输出的消息
+     * @param string $msg Message
      */
     private function success_msg($msg) {
         echo "<div id='message' class='updated notice'><p>{$msg}</p></div>";
     }
 
     /**
-     * 向页面输出状态为失败的消息
+     * Print fail message
      *
      * @since 1.0.0
      *
-     * @param string $msg 要输出的消息
+     * @param string $msg Message
      */
     private function error_msg($msg) {
         echo "<div id='message' class='updated error'><p>{$msg}</p></div>";
