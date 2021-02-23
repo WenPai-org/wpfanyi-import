@@ -266,7 +266,30 @@ EOT;
             $this->error_msg(__('压缩包解析失败，该压缩包可能已经损坏', 'wpfanyi-import'));
         }
 
-        $zip->extractTo($trans_dir);
+        /**
+         * @var array Save the file name of the Mo and Po files read from the zip package
+         *
+         * @since 1.0.0
+         */
+        $trans_file_list = [];
+
+        /** Read valid Mo and Po files from the translation package to prevent code injection */
+        for ($i = 0; $i < $zip->numFiles; $i++) {
+            $filename = $zip->getNameIndex($i);
+
+            $pattern="#.*\.(mo|po)#i";
+            if (preg_match($pattern, $filename)) {
+                $trans_file_list[] = $filename;
+            }
+        }
+
+        if (empty($trans_file_list)) {
+            $this->error_msg(__('There are no valid Po and Mo files in the current translation package', 'wpfanyi-import'));
+
+            return false;
+        }
+
+        $zip->extractTo($trans_dir, $trans_file_list);
         $zip->close();
 
         /** Try to delete the temporary file after all operations */
