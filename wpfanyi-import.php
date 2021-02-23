@@ -27,6 +27,7 @@ defined( 'ABSPATH' ) || exit;
 add_action('init', function () {
     if (is_admin() && current_user_can( 'install_plugins' )) {
         define('WPF_VERSION', '1.0.0');
+        define('WPF_DIR_PATH', plugin_dir_path(__FILE__));
 
         /** Load core */
         require_once 'core.php';
