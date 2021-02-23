@@ -1,0 +1,130 @@
+# Copyright (C) 2021 薇晓朵
+# This file is distributed under the same license as the 翻译包导入工具 plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: 翻译包导入工具 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wxd-trans-import\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-02-23T05:17:44+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: wxd-trans-import\n"
+
+#. Plugin Name of the plugin
+msgid "翻译包导入工具"
+msgstr ""
+
+#. Description of the plugin
+msgid "无需使用FTP，这个轻便的工具将帮你快捷的导入插件和主题的翻译包"
+msgstr ""
+
+#. Author of the plugin
+msgid "薇晓朵"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.weixiaoduo.com/"
+msgstr ""
+
+#: core.php:46
+#: core.php:47
+#: page.php:2
+msgid "导入翻译包"
+msgstr ""
+
+#: core.php:72
+msgid "翻译导入成功"
+msgstr ""
+
+#: core.php:90
+msgid "非法的提交，你没有权限这样做"
+msgstr ""
+
+#: core.php:96
+msgid "非法的包类型"
+msgstr ""
+
+#: core.php:103
+msgid "未选择翻译包"
+msgstr ""
+
+#: core.php:108
+msgid "翻译包应为zip格式压缩包"
+msgstr ""
+
+#: core.php:115
+msgid "你输入的不是有效的URL地址"
+msgstr ""
+
+#: core.php:120
+msgid "参数错误：未知的翻译包导入方式"
+msgstr ""
+
+#: core.php:143
+msgid "翻译包上传失败，请检查文件系统权限是否正常"
+msgstr ""
+
+#: core.php:145
+msgid "翻译包获取失败，请检查URL是否有效"
+msgstr ""
+
+#. translators: %s: 不可写的系统翻译存储目录的具体路径
+#: core.php:153
+msgid "该WordPress的翻译存储目录不可写：%s"
+msgstr ""
+
+#: core.php:159
+msgid "当前服务器不支持zip压缩包的解压，请联系服务商开启php的zip扩展模块"
+msgstr ""
+
+#: core.php:167
+msgid "压缩包解析失败，该压缩包可能已经损坏"
+msgstr ""
+
+#: page.php:6
+msgid "翻译包是包含.mo和.po文件的zip压缩包，在本页面选择翻译包并正确设置其类型后点击导入即可将其添加到系统中"
+msgstr ""
+
+#: page.php:7
+msgid "注意：若已存在同名的翻译包则该操作会将其覆盖"
+msgstr ""
+
+#: page.php:11
+msgid "从本地上传"
+msgstr ""
+
+#: page.php:12
+msgid "从URL导入"
+msgstr ""
+
+#: page.php:23
+msgid "翻译包："
+msgstr ""
+
+#: page.php:31
+#: page.php:60
+msgid "包类型："
+msgstr ""
+
+#: page.php:35
+#: page.php:64
+msgid "插件"
+msgstr ""
+
+#: page.php:38
+#: page.php:67
+msgid "主题"
+msgstr ""
+
+#: page.php:45
+#: page.php:74
+msgid "立即导入"
+msgstr ""
+
+#: page.php:56
+msgid "URL地址："
+msgstr ""
