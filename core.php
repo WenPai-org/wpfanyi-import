@@ -50,6 +50,8 @@ class WPfanyi_Import {
                 [$this, 'wpfanyi_import_page']
             );
         });
+
+        add_action('admin_enqueue_scripts', [$this, 'register_css_and_js']);
     }
 
     /**
@@ -72,101 +74,26 @@ class WPfanyi_Import {
             }
         }
 
-        add_action('admin_footer', [$this, 'register_css_and_js']);
-
         require_once 'page.php';
     }
 
     /**
      * Register CSS and JS for forms
+     *
+     * @todo JS dependency order problem
+     *
+     * @param $page string Current page
      */
-    public function register_css_and_js() {
-        echo <<<EOT
-<link  href="https://lib.baomitu.com/layui/2.5.7/css/layui.min.css" rel="stylesheet">
-<style>
-.layui-tab-title li{
-    margin: 0 2em;
-}
-.layui-tab-title .layui-this:after{
-        border: 0;
-   box-shadow: inset 0 -0px #007cba;
-}
-.help .layui-show{
-        background: #fff;
-}
-.layui-colla-title{
-    
-    box-shadow: #00000005 1px 1px 8px;
-}
-    .layui-tab-title li.layui-this, .layui-tab-title li:hover {
-        box-shadow: inset 0 -2px #007cba;
+    public function register_css_and_js($page) {
+        if ('tools_page_wpfanyi_import' !== $page) {
+            return;
+        }
 
-        transition: box-shadow .5s ease-in-out;
-    }
-
-
-	#trans_url{min-height: 31px;
-		width: 28em;}
-	.form-table th{
-		    width: 140px;
-	}
-	.input_clear button{
-	    position: absolute;
-    right: 8px;
-    margin: auto;
-    bottom: 0;
-    top: 0;
-    border: 0;
-    background: none;
-    cursor: pointer;
-	}
-	.right{}
-</style>
-<script  src="//lib.baomitu.com/sisyphus.js/latest/sisyphus.min.js"></script>
-<script  src="//lib.baomitu.com/layui/2.5.7/layui.min.js"></script>
-<script type="text/javascript">
-  (function ($) {
-
-$(".layui-tab-title li").click(function(){
-		var picTabNum = $(this).index();
-		sessionStorage.setItem("picTabNum",picTabNum);
-		var getPicTabNum = sessionStorage.getItem("picTabNum");
-		$(".layui-tab-title li").eq(getPicTabNum).addClass("layui-this").siblings().removeClass("layui-this");
-		$(".layui-tab-content>div").eq(getPicTabNum).addClass("layui-show").siblings().removeClass("layui-show");
-	});
-	$(function(){
-		var getPicTabNum = sessionStorage.getItem("picTabNum");
-		$(".layui-tab-title li").eq(getPicTabNum).addClass("layui-this").siblings().removeClass("layui-this");
-		$(".layui-tab-content>div").eq(getPicTabNum).addClass("layui-show").siblings().removeClass("layui-show");
-	})
-
-   
-	
-
-$( "form" ).sisyphus();
-		$("input").focus(function(){  
-    $(this).parent().children(".input_clear").show();  
-});  
-$("input").blur(function(){  
-    if($(this).val()=='')  
-    {  
-        $(this).parent().children(".input_clear").hide();  
-    }  
-});  
-$(".input_clear").click(function(){  
-    $(this).parent().find('input').val('');  
-    $(this).hide();  
-}); 
-
-
-
-layui.use('element', function(){
-  var element = layui.element;
-
-});
-  })(jQuery);
-</script>
-EOT;
+        wp_enqueue_script('layui', WPF_DIR_URL . 'assets/js/layui.min.js', [], WPF_VERSION);
+        wp_enqueue_script('sisyphus', WPF_DIR_URL . 'assets/js/sisyphus.min.js', ['layui'], WPF_VERSION);
+        wp_enqueue_script('wpf', WPF_DIR_URL . 'assets/js/wpf.js', ['jquery', 'layui', 'sisyphus'], WPF_VERSION);
+        wp_enqueue_style('layui', WPF_DIR_URL . 'assets/css/layui.min.css', [], WPF_VERSION);
+        wp_enqueue_style('wpf-style', WPF_DIR_URL . 'assets/css/wpf-style.css', ['layui'], WPF_VERSION);
     }
 
     /**

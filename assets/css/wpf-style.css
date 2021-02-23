@@ -1,0 +1,36 @@
+﻿.layui-tab-title li{
+    margin: 0 2em;
+}
+.layui-tab-title .layui-this:after{
+    border: 0;
+    box-shadow: inset 0 -0px #007cba;
+}
+.help .layui-show{
+    background: #fff;
+}
+.layui-colla-title{
+
+    box-shadow: #00000005 1px 1px 8px;
+}
+.layui-tab-title li.layui-this, .layui-tab-title li:hover {
+    box-shadow: inset 0 -2px #007cba;
+
+    transition: box-shadow .5s ease-in-out;
+}
+
+
+#trans_url{min-height: 31px;
+    width: 28em;}
+.form-table th{
+    width: 140px;
+}
+.input_clear button{
+    position: absolute;
+    right: 8px;
+    margin: auto;
+    bottom: 0;
+    top: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
