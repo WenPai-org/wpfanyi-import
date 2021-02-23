@@ -26,17 +26,8 @@ defined( 'ABSPATH' ) || exit;
 
 add_action('init', function () {
     if (is_admin() && current_user_can( 'install_plugins' )) {
-        /** 载入i18n语言包 */
-        $current_locale = get_locale();
-        if (!empty($current_locale)) {
-            $mo_file = dirname(__FILE__) . '/languages/wpfanyi-import-' . $current_locale . ".mo";
-            if (@file_exists($mo_file) && is_readable($mo_file)) {
-                load_textdomain('wpfanyi-import', $mo_file);
-            }
-        }
-
         /** 载入核心功能 */
         require_once 'core.php';
-        new WXD_Trans_Import();
+        new WPfanyi_Import();
     }
 });

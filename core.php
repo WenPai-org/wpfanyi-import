@@ -1,12 +1,12 @@
 <?php
 /**
- * Class WXD_Trans_Import
+ * Class WPfanyi_Import
  *
  * 翻译包导入小工具核心类
  *
  * @package wpfanyi-import
  */
-class WXD_Trans_Import {
+class WPfanyi_Import {
 
     /**
      * @var string 翻译导入的方式 file or url
