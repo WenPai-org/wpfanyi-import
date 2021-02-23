@@ -26,6 +26,8 @@ defined( 'ABSPATH' ) || exit;
 
 add_action('init', function () {
     if (is_admin() && current_user_can( 'install_plugins' )) {
+        define('WPF_VERSION', '1.0.0');
+
         /** Load core */
         require_once 'core.php';
         new WPfanyi_Import();
