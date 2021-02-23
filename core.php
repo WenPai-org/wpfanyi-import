@@ -43,8 +43,8 @@ class WPfanyi_Import {
         add_action(is_multisite() ? 'network_admin_menu' : 'admin_menu', function () {
             add_submenu_page(
                 is_multisite() ? 'index.php' : 'tools.php',
-                __('导入翻译包', 'wpfanyi-import'),
-                __('导入翻译包', 'wpfanyi-import'),
+                __('import translation', 'wpfanyi-import'),
+                __('import translation', 'wpfanyi-import'),
                 is_multisite() ? 'manage_network_options' : 'manage_options',
                 'wpfanyi_import',
                 [$this, 'wpfanyi_import_page']
@@ -67,7 +67,7 @@ class WPfanyi_Import {
 
             if ($this->data_verify()) {
                 if ($this->import_trans()) {
-                    $this->success_msg(__('翻译导入成功', 'wpfanyi-import'));
+                    $this->success_msg(__('Translation imported successfully!', 'wpfanyi-import'));
                 }
             }
         }
@@ -180,37 +180,37 @@ EOT;
     private function data_verify() {
         if (!current_user_can( 'install_plugins' ) || !(isset($_POST['_wpnonce']) &&
             wp_verify_nonce($_POST['_wpnonce'], 'wpfanyi-import-nonce'))) {
-            $this->error_msg(__('非法的提交，你没有权限这样做', 'wpfanyi-import'));
+            $this->error_msg(__('You don\'t have the authority to do that', 'wpfanyi-import'));
 
             return false;
         }
 
         if ('plugin' !== $this->trans_type && 'theme' !== $this->trans_type) {
-            $this->error_msg(__('非法的包类型', 'wpfanyi-import'));
+            $this->error_msg(__('Unexpected translation package type', 'wpfanyi-import'));
 
             return false;
         }
 
         if ('file' === $this->trans_import_method) {
             if (empty($this->trans_zip['name'])) {
-                $this->error_msg(__('未选择翻译包', 'wpfanyi-import'));
+                $this->error_msg(__('Translation package not selected', 'wpfanyi-import'));
 
                 return false;
             }
             if ('application/x-zip-compressed' !== @$this->trans_zip['type']) {
-                $this->error_msg(__('翻译包应为zip格式压缩包', 'wpfanyi-import'));
+                $this->error_msg(__('The translation package should be in ZIP format', 'wpfanyi-import'));
 
                 return false;
             }
         } elseif ('url' === $this->trans_import_method) {
             $pattern="#(http|https)://(.*\.)?.*\..*#i";
             if (!preg_match($pattern, $this->trans_url)) {
-                $this->error_msg(__('你输入的不是有效的URL地址', 'wpfanyi-import'));
+                $this->error_msg(__('Invalid URL format', 'wpfanyi-import'));
 
                 return false;
             }
         } else {
-            $this->error_msg(__('参数错误：未知的翻译包导入方式', 'wpfanyi-import'));
+            $this->error_msg(__('Parameter error: unknown translation package import method', 'wpfanyi-import'));
 
             return false;
         }
@@ -233,9 +233,9 @@ EOT;
 
         if(!file_exists($trans_zip_file) && filesize($trans_zip_file) > 0) {
             if ('file' === $this->trans_import_method) {
-                $this->error_msg(__('翻译包上传失败，请检查文件系统权限是否正常', 'wpfanyi-import'));
+                $this->error_msg(__('Translation package upload failed, please check whether the file system permissions are normal', 'wpfanyi-import'));
             } else {
-                $this->error_msg(__('翻译包获取失败，请检查URL是否有效', 'wpfanyi-import'));
+                $this->error_msg(__('Translation package acquisition failed, please check whether the URL is valid', 'wpfanyi-import'));
             }
 
             return false;
@@ -247,15 +247,15 @@ EOT;
              * If it fails, it proves that there is a problem with the file system permissions.
              */
             if (!mkdir($trans_dir, 0775, true)) {
-                /* translators: %s: 不可写的系统翻译存储目录的具体路径 */
-                $this->error_msg(sprintf(__('该WordPress的翻译存储目录不可写：%s', 'wpfanyi-import'), $trans_dir));
+                /* translators: %s: Translation storage directory */
+                $this->error_msg(sprintf(__('The translation storage directory of this WordPress is not writable：%s', 'wpfanyi-import'), $trans_dir));
 
                 return false;
             }
         }
 
         if (!class_exists('ZipArchive')) {
-            $this->error_msg(__('当前服务器不支持zip压缩包的解压，请联系服务商开启php的zip扩展模块', 'wpfanyi-import'));
+            $this->error_msg(__('This server doesn‘t support the decompression of Zip archives. Please contact the service provider of this server to enable the zip extension module function of PHP.', 'wpfanyi-import'));
 
             return false;
         }
@@ -263,7 +263,7 @@ EOT;
         $zip = new ZipArchive;
         $res = $zip->open($trans_zip_file);
         if (!$res) {
-            $this->error_msg(__('压缩包解析失败，该压缩包可能已经损坏', 'wpfanyi-import'));
+            $this->error_msg(__('Failed to parse the Zip package. The Zip package may be damaged', 'wpfanyi-import'));
         }
 
         /**
