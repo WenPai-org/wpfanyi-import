@@ -1,36 +1,93 @@
-﻿.layui-tab-title li{
-    margin: 0 2em;
+﻿/*Tab*/
+.wpfanyi-tab-title {
+  position: relative;
+  left: 0;
+  height: 40px;
+  white-space: nowrap;
+  font-size: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  transition: all .2s;
+  -webkit-transition: all .2s;
 }
-.layui-tab-title .layui-this:after{
-    border: 0;
-    box-shadow: inset 0 -0px #007cba;
+.wpfanyi-tab-title, .wpfanyi-tab-title .wpfanyi-this:after {
+  border-color: #e6e6e6;
 }
-.help .layui-show{
-    background: #fff;
+.wpfanyi-colla-title {
+  box-shadow: #00000005 1px 1px 8px;
 }
-.layui-colla-title{
+.wpfanyi-tab-title .wpfanyi-this:after {
+  border: 0;
+  box-shadow: inset 0 -0px #007cba;
+}
+.wpfanyi-tab-title li {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  position: relative;
+  line-height: 40px;
+  min-width: 65px;
+  padding: 0 15px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 2em;
+}
+.wpfanyi-tab-title li.wpfanyi-this, .wpfanyi-tab-title li:hover {
+  box-shadow: inset 0 -2px #007cba;
+  transition: box-shadow .5s ease-in-out;
+}
+.wpfanyi-tab-item {
+  display: none;
+}
+.wpfanyi-show {
+  display: block !important;
+}
 
-    box-shadow: #00000005 1px 1px 8px;
+#trans_url {
+  min-height: 31px;
+  width: 28em;
 }
-.layui-tab-title li.layui-this, .layui-tab-title li:hover {
-    box-shadow: inset 0 -2px #007cba;
-
-    transition: box-shadow .5s ease-in-out;
+.form-table th {
+  min-width: 140px;
+}
+.input_clear button {
+  position: absolute;
+  right: 8px;
+  margin: auto;
+  bottom: 0;
+  top: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
 }
 
-
-#trans_url{min-height: 31px;
-    width: 28em;}
-.form-table th{
-    min-width: 140px;
+.wpfanyi-import-config-help .toggle-indicator:before {
+  content: "\f140";
+  font: 20px/1 dashicons;
 }
-.input_clear button{
-    position: absolute;
-    right: 8px;
-    margin: auto;
-    bottom: 0;
-    top: 0;
-    border: 0;
-    background: none;
-    cursor: pointer;
+.wpfanyi-import-config-help .handlediv {
+  float: right;
+  width: 36px;
+  height: 36px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: 0 0;
+  cursor: pointer;
+}
+.wpfanyi-import-config-help .handle {
+  border-bottom: 1px solid #ccd0d4;
+  line-height: 1.4em;
+  font-size: 14px;
+  margin: 0;
+  padding: 8px 12px;
+}
+.wpfanyi-import-config-help .inside {
+  padding: 12px 30px 12px;
+  display: none;
+}
+.wpfanyi-import-config-help {
+  max-width: 800px;
 }

@@ -1,16 +1,20 @@
-(function ($) {
-  $(".layui-tab-title li").click(function () {
-    var picTabNum = $(this).index();
-    sessionStorage.setItem("picTabNum", picTabNum);
-    var getPicTabNum = sessionStorage.getItem("picTabNum");
-    $(".layui-tab-title li").eq(getPicTabNum).addClass("layui-this").siblings().removeClass("layui-this");
-    $(".layui-tab-content>div").eq(getPicTabNum).addClass("layui-show").siblings().removeClass("layui-show");
+$(function () {
+  $(".wpfanyi-tab-title li").click(function () {
+    var TabNum = $(this).index();
+    sessionStorage.setItem("TabNum", TabNum);
+    var getTabNum = sessionStorage.getItem("TabNum");
+    $(".wpfanyi-tab-title li").eq(getTabNum).addClass("wpfanyi-this").siblings().removeClass("wpfanyi-this");
+    $(".wpfanyi-tab-content>div").eq(getTabNum).addClass("wpfanyi-show").siblings().removeClass("wpfanyi-show");
   });
   $(function () {
-    var getPicTabNum = sessionStorage.getItem("picTabNum");
-    $(".layui-tab-title li").eq(getPicTabNum).addClass("layui-this").siblings().removeClass("layui-this");
-    $(".layui-tab-content>div").eq(getPicTabNum).addClass("layui-show").siblings().removeClass("layui-show");
+    var getTabNum = sessionStorage.getItem("TabNum");
+    $(".wpfanyi-tab-title li").eq(getTabNum).addClass("wpfanyi-this").siblings().removeClass("wpfanyi-this");
+    $(".wpfanyi-tab-content>div").eq(getTabNum).addClass("wpfanyi-show").siblings().removeClass("wpfanyi-show");
   })
+
+  $(".wpfanyi-import-config-help").click(function () {
+    $(".inside").slideToggle();
+  });
 
   $("form").sisyphus();
   $("input").focus(function () {
@@ -25,9 +29,5 @@
     $(this).parent().find('input').val('');
     $(this).hide();
   });
-
-  layui.use('element', function () {
-    var element = layui.element;
-
-  });
-})(jQuery);
+})
+(jQuery);
