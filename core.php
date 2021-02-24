@@ -78,7 +78,7 @@ class WPfanyi_Import {
     /**
      * Register CSS and JS for forms
      *
-     * @todo JS dependency order problem
+     * @since 1.0.0
      *
      * @param $page string Current page
      */
@@ -89,7 +89,7 @@ class WPfanyi_Import {
 
         wp_enqueue_script('layui', WPF_DIR_URL . 'assets/js/layui.min.js', [], WPF_VERSION);
         wp_enqueue_script('sisyphus', WPF_DIR_URL . 'assets/js/sisyphus.min.js', ['layui'], WPF_VERSION);
-        wp_enqueue_script('wpf', WPF_DIR_URL . 'assets/js/wpf.js', ['jquery', 'layui', 'sisyphus'], WPF_VERSION);
+        wp_enqueue_script('wpf', WPF_DIR_URL . 'assets/js/wpf.js', ['jquery', 'layui', 'sisyphus'], WPF_VERSION, true);
         wp_enqueue_style('layui', WPF_DIR_URL . 'assets/css/layui.min.css', [], WPF_VERSION);
         wp_enqueue_style('wpf-style', WPF_DIR_URL . 'assets/css/wpf-style.css', ['layui'], WPF_VERSION);
     }
