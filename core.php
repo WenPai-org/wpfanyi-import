@@ -37,9 +37,7 @@ class WPfanyi_Import {
     private $trans_url = '';
 
     public function __construct() {
-        /**
-         * Register menu
-         */
+        /** Register menu */
         add_action(is_multisite() ? 'network_admin_menu' : 'admin_menu', function () {
             add_submenu_page(
                 is_multisite() ? 'index.php' : 'tools.php',
