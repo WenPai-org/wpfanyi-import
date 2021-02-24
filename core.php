@@ -151,7 +151,7 @@ class WPfanyi_Import {
      * @return bool true on success or false on failure.
      */
     private function import_trans() {
-        $trans_dir = WP_CONTENT_DIR . '/languages/' . $this->trans_type . 's';
+        $trans_dir = WP_CONTENT_DIR . "/languages/{$this->trans_type}s";
 
         $trans_zip_file = 'file' === $this->trans_import_method ? @$this->trans_zip['tmp_name'] : download_url($this->trans_url, $timeout = 1000);
 
