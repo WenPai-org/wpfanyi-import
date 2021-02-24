@@ -139,7 +139,6 @@ class WPfanyi_Import {
             return false;
         }
 
-
         return true;
     }
 
