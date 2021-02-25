@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WPfanyi import
- * Description: Upload and install WordPress language packs just like installing WordPress theme plugins. Don't need to use FTP or SFTP software to upload.This time-saving and lightweight tool will help you import any plugins and theme's translated language packs in standard formats Zip quickly and easily.
+ * Description: Install language package like a theme/plugin, no need for FTP, this tool will save you a lot of time.
  * Author: WenPai.org
  * Author URI:https://wenpai.org/
  * Text Domain: wpfanyi-import
