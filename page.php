@@ -101,36 +101,25 @@ defined('ABSPATH') || exit;
         </div>
       </div>
       <div class="wpfanyi-import-config-help stuffbox">
-        <button type="button" class="handlediv" aria-expanded="true"><span class="screen-reader-text">切换面板：网关配置帮助</span><span
-                  class="toggle-indicator" aria-hidden="true"></span></button>
-        <h2 class="handle"> 使用帮助 </h2>
+        <button type="button" class="handlediv" aria-expanded="true"><span class="toggle-indicator" aria-hidden="true"></span></button>
+        <h2 class="handle"><?php esc_html_e('Help', 'wpfanyi-import'); ?></h2>
         <div class="inside">
-          <p>
-            对于有需要&nbsp;WordPress&nbsp;主题、插件产品的用户，可以直接在&nbsp;<a href="https://wpfanyi.com" target="_blank"
-                                                               rel="noopener">wpfanyi.com</a>&nbsp;网站下载到的最新翻译和已编译完成的中文语言包（zh_CN&nbsp;命名文件）。<br/>
-            <br/>
-            一、通用手动安装；<br/>
-            1.&nbsp;安装插件语言包<br/>
-            将下载到的插件语言包&nbsp;<code>.zip</code>&nbsp;文件解压后上传至路径为您的网站<code>/wp-content/languages/plugins</code>即可。<br/>
-            2.&nbsp;安装主题语言包<br/>
-            将下载到的主题语言包&nbsp;<code>.zip</code>&nbsp;文件解压后上传至路径为您的网站<code>/wp-content/languages/themes</code>即可。<br/>
-            3.&nbsp;其他安装方式<br/>
-            除前两种方式外，也可以直接在插件或主题的安装文件夹内查找如&nbsp;<code>languages&nbsp;local&nbsp;lang&nbsp;i18n</code>&nbsp;放入对应的目录中。<br/>
-            <br/>
-            二、文派插件安装；<br/>
-            1、上传安装<br/>
-            通过直接上传您已下载到的<code>XXX_zh_CN.zip</code>&nbsp;语言包文件，选择对应的语言类型【插件】或【主题】点击导入，即可完成。<br/>
-            2、在线安装<br/>
-            前往文派翻译（<a href="https://wpfanyi.com" target="_blank" rel="noopener">wpfanyi.com</a>）获取到语言包地址，填入在线安装地址，选择【插件】或【主题】点击导入，即可完成。<br/>
-            <br/>
-            三、中文翻译请求；<br/>
-            1、用户中文翻译请求<br/>
-            &nbsp;如果您是WordPress插件主题作者，并希望将自己喜欢的产品翻译至中文，请通过&nbsp;<a href="https://wpfanyi.com/new-project"
-                                                                   target="_blank" rel="noopener">https://wpfanyi.com/new-project</a>&nbsp;提交信息，我们将无偿处理。<br/>
-            2、作者中文翻译请求<br/>
-            如果您是WordPress开发者，并希望将自己的产品翻译至中文，寻求中文贡献者，请邮件至&nbsp;<a href="mailto:wpfanyi@feibisi.com" target="_blank"
-                                                                 rel="noopener">wpfanyi@feibisi.com</a>&nbsp;我们中文翻译团队，将会无偿处理。（仅限&nbsp;WordPress.org&nbsp;免费产品，如需长期贡献者，请为&nbsp;<code>@wpfanyi</code>&nbsp;添加&nbsp;PET&nbsp;翻译权限）
-          </p>
+          <h2><?php esc_html_e('This plugin provides an innovative language package installation method.', 'wpfanyi-import'); ?></h2>
+          <ol>
+            <li>
+              <b><?php esc_html_e('Old Method', 'wpfanyi-import'); ?></b>
+              <p><?php esc_html_e('You need to download the language package to the local first, unzip the package, and upload it to the correct path via FTP.', 'wpfanyi-import'); ?><br/>
+                  <?php esc_html_e('Imagine the process of selecting a lengthy path on FTP with the mouse. This is troublesome, right?', 'wpfanyi-import'); ?></p>
+            </li>
+            <li>
+              <b><?php esc_html_e('New Method', 'wpfanyi-import'); ?></b>
+              <p><?php esc_html_e('Now you only need to paste the download address of the language package in the text input, and correctly select the type of language package (plugin or theme), after clicking “Import”, the tool will help you complete all operations.', 'wpfanyi-import'); ?><br/>
+                  <?php esc_html_e('If you have a local language package, you can also easily import it through this tool.', 'wpfanyi-import'); ?></p>
+            </li>
+          </ol>
+          <h2><?php esc_html_e('Need to translate a WordPress plugin/theme?', 'wpfanyi-import'); ?></h2>
+          <?php /* translators: %s: https://wpfanyi.com/new-project */ ?>
+          <p><?php printf(__('If he is hosted in wordpress.org we will handle its translation for free! Please send your needs to: <a href="%s" target="_blank">https://wpfanyi.com/new-project</a>.', 'wpfanyi-import'), 'https://wpfanyi.com/new-project'); ?></p>
         </div>
       </div>
     </div>
