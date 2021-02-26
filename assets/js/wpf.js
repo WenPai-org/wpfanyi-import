@@ -12,7 +12,7 @@
     $(".wpfanyi-tab-content>div").eq(getTabNum).addClass("wpfanyi-show").siblings().removeClass("wpfanyi-show");
   })
 
-  $(".wpfanyi-import-config-help").click(function () {
+  $(".wpfanyi-import-config-help .handle").click(function () {
     $(".inside").slideToggle();
   });
 
