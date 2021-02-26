@@ -83,6 +83,7 @@
   font-size: 14px;
   margin: 0;
   padding: 8px 12px;
+  cursor: pointer;
 }
 .wpfanyi-import-config-help .inside {
   padding: 12px 30px 12px;
