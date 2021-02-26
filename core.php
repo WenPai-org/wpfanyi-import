@@ -119,7 +119,7 @@ class WPfanyi_Import {
 
                 return false;
             }
-            if ('application/x-zip-compressed' !== @$this->trans_zip['type']) {
+            if ('application/x-zip-compressed' !== @$this->trans_zip['type'] && 'application/zip' !== @$this->trans_zip['type']) {
                 $this->error_msg(__('The translation package should be in ZIP format', 'wpfanyi-import'));
 
                 return false;
