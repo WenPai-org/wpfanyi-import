@@ -1,4 +1,4 @@
-$(function () {
+(function ($) {
   $(".wpfanyi-tab-title li").click(function () {
     var TabNum = $(this).index();
     sessionStorage.setItem("TabNum", TabNum);
@@ -29,5 +29,4 @@ $(function () {
     $(this).parent().find('input').val('');
     $(this).hide();
   });
-})
-(jQuery);
+})(jQuery);
