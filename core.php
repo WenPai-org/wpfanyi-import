@@ -199,7 +199,7 @@ class WPfanyi_Import {
             $filename = $zip->getNameIndex($i);
 
             $pattern="#.*\.(mo|po)#i";
-            if (preg_match($pattern, $filename)) {
+            if (preg_match($pattern, $filename) && !stristr($filename, '/')) {
                 $trans_file_list[] = $filename;
             }
         }
