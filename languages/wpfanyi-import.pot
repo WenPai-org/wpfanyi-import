@@ -1,0 +1,178 @@
+# Copyright (C) 2021 WenPai.org
+# This file is distributed under the same license as the WPfanyi import plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPfanyi import 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpfanyi-import\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-02-26T04:13:20+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: wpfanyi-import\n"
+
+#. Plugin Name of the plugin
+msgid "WPfanyi import"
+msgstr ""
+
+#. Description of the plugin
+msgid "Install translation package like a theme/plugin, no need for FTP, this tool will save you a lot of time."
+msgstr ""
+
+#. Author of the plugin
+msgid "WenPai.org"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://wenpai.org/"
+msgstr ""
+
+#: core.php:44
+#: core.php:45
+msgid "import translation"
+msgstr ""
+
+#: core.php:70
+msgid "Translation imported successfully!"
+msgstr ""
+
+#: core.php:105
+msgid "You don't have the authority to do that"
+msgstr ""
+
+#: core.php:111
+msgid "Unexpected translation package type"
+msgstr ""
+
+#: core.php:118
+msgid "Translation package not selected"
+msgstr ""
+
+#: core.php:123
+msgid "The translation package should be in ZIP format"
+msgstr ""
+
+#: core.php:130
+msgid "Invalid URL format"
+msgstr ""
+
+#: core.php:135
+msgid "Parameter error: unknown translation package import method"
+msgstr ""
+
+#: core.php:157
+msgid "Translation package upload failed, please check whether the file system permissions are normal"
+msgstr ""
+
+#: core.php:159
+msgid "Translation package acquisition failed, please check whether the URL is valid"
+msgstr ""
+
+#. translators: %s: Translation storage directory
+#: core.php:172
+msgid "The translation storage directory of this WordPress is not writable：%s"
+msgstr ""
+
+#: core.php:179
+msgid "This server doesn‘t support the decompression of Zip archives. Please contact the service provider of this server to enable the zip extension module function of PHP."
+msgstr ""
+
+#: core.php:187
+msgid "Failed to parse the Zip package. The Zip package may be damaged"
+msgstr ""
+
+#: core.php:208
+msgid "There are no valid Po and Mo files in the current translation package"
+msgstr ""
+
+#: page.php:11
+msgid "Import translation"
+msgstr ""
+
+#: page.php:15
+msgid "The translation pack is a Zip package including MO and PO files. Select the translation pack on this page and set its type correctly then click Import to add it to WordPress."
+msgstr ""
+
+#: page.php:17
+msgid "Note: If a translation package with the same name already exists, this operation will overwrite it"
+msgstr ""
+
+#: page.php:24
+msgid "Import from Local"
+msgstr ""
+
+#: page.php:25
+msgid "Import from URL"
+msgstr ""
+
+#: page.php:36
+msgid "Translation package:"
+msgstr ""
+
+#: page.php:44
+#: page.php:83
+msgid "Package type:"
+msgstr ""
+
+#: page.php:48
+#: page.php:87
+msgid "Plugin"
+msgstr ""
+
+#: page.php:51
+#: page.php:90
+msgid "Theme"
+msgstr ""
+
+#: page.php:58
+#: page.php:97
+msgid "Import"
+msgstr ""
+
+#: page.php:69
+msgid "URL address:"
+msgstr ""
+
+#: page.php:105
+msgid "Help"
+msgstr ""
+
+#: page.php:107
+msgid "This plugin provides an innovative translation package installation method."
+msgstr ""
+
+#: page.php:110
+msgid "Old Method"
+msgstr ""
+
+#: page.php:111
+msgid "You need to download the translation package to the local first, unzip the package, and upload it to the correct path via FTP."
+msgstr ""
+
+#: page.php:112
+msgid "Imagine the process of selecting a lengthy path on FTP with the mouse. This is troublesome, right?"
+msgstr ""
+
+#: page.php:115
+msgid "New Method"
+msgstr ""
+
+#: page.php:116
+msgid "Now you only need to paste the download address of the translation package in the text input, and correctly select the type of translation package (plugin or theme), after clicking “Import”, the tool will help you complete all operations."
+msgstr ""
+
+#: page.php:117
+msgid "If you have a local translation package, you can also easily import it through this tool."
+msgstr ""
+
+#: page.php:120
+msgid "Need to translate a WordPress plugin/theme?"
+msgstr ""
+
+#. translators: %s: https://wpfanyi.com/new-project
+#: page.php:122
+msgid "If he is hosted in wordpress.org we will handle its translation for free! Please send your needs to: <a href=\"%s\" target=\"_blank\">https://wpfanyi.com/new-project</a>."
+msgstr ""

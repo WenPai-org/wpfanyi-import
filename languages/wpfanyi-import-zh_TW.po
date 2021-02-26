@@ -1,0 +1,206 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpfanyi-import\n"
+"POT-Creation-Date: 2021-02-26T03:26:29+00:00\n"
+"PO-Revision-Date: 2021-02-26 12:18+0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Plugin Name of the plugin
+msgid "WPfanyi import"
+msgstr "文派翻譯匯入器"
+
+#. Description of the plugin
+msgid ""
+"Install translation package like a theme/plugin, no need for FTP, this tool "
+"will save you a lot of time."
+msgstr "像安裝外掛、主題那樣安裝翻譯包，無需FTP，這個工具將為你節省大量時間。"
+
+#. Author of the plugin
+msgid "WenPai.org"
+msgstr "文派"
+
+#. Author URI of the plugin
+msgid "https://wenpai.org/"
+msgstr "https://wenpai.org/"
+
+#: core.php:44 core.php:45
+msgid "import translation"
+msgstr "匯入翻譯"
+
+#: core.php:70
+msgid "Translation imported successfully!"
+msgstr "翻譯匯入成功！"
+
+#: core.php:105
+msgid "You don't have the authority to do that"
+msgstr "你無權這樣做"
+
+#: core.php:111
+msgid "Unexpected translation package type"
+msgstr "意外的翻譯包型別"
+
+#: core.php:118
+msgid "Translation package not selected"
+msgstr "沒有選擇翻譯包"
+
+#: core.php:123
+msgid "The translation package should be in ZIP format"
+msgstr "翻譯包應為ZIP格式"
+
+#: core.php:130
+msgid "Invalid URL format"
+msgstr "錯誤的URL格式"
+
+#: core.php:135
+msgid "Parameter error: unknown translation package import method"
+msgstr "引數錯誤：翻譯包匯入方法未知"
+
+#: core.php:157
+msgid ""
+"Translation package upload failed, please check whether the file system "
+"permissions are normal"
+msgstr "翻譯包上傳失敗，請檢查檔案系統許可權是否正常"
+
+#: core.php:159
+msgid ""
+"Translation package acquisition failed, please check whether the URL is valid"
+msgstr "獲取翻譯包失敗，請檢查URL是否有效"
+
+#. translators: %s: Translation storage directory
+#: core.php:172
+msgid "The translation storage directory of this WordPress is not writable：%s"
+msgstr "該WordPress的翻譯儲存目錄不可寫：％s"
+
+#: core.php:179
+msgid ""
+"This server doesn‘t support the decompression of Zip archives. Please contact "
+"the service provider of this server to enable the zip extension module function "
+"of PHP."
+msgstr ""
+"此伺服器不支援解壓ZIP包。 請與伺服器提供商聯絡以啟用PHP的zip擴充套件模組功能。"
+
+#: core.php:187
+msgid "Failed to parse the Zip package. The Zip package may be damaged"
+msgstr "無法解析ZIP包，該包可能已損壞"
+
+#: core.php:208
+msgid "There are no valid Po and Mo files in the current translation package"
+msgstr "當前翻譯包中沒有有效的Po和Mo檔案"
+
+#: page.php:11
+msgid "Import translation"
+msgstr "匯入翻譯"
+
+#: page.php:15
+msgid ""
+"The translation pack is a Zip package including MO and PO files. Select the "
+"translation pack on this page and set its type correctly then click Import to "
+"add it to WordPress."
+msgstr ""
+"翻譯包是一個包含MO和PO檔案的Zip包。在此頁面上選擇翻譯包並正確設定其型別，然後單"
+"擊“匯入”以將其新增到WordPress。"
+
+#: page.php:17
+msgid ""
+"Note: If a translation package with the same name already exists, this "
+"operation will overwrite it"
+msgstr "注意：若已存在同名翻譯包，則此操作將覆蓋它"
+
+#: page.php:24
+msgid "Import from Local"
+msgstr "從本地匯入"
+
+#: page.php:25
+msgid "Import from URL"
+msgstr "從URL匯入"
+
+#: page.php:36
+msgid "Translation package:"
+msgstr "翻譯包："
+
+#: page.php:44 page.php:83
+msgid "Package type:"
+msgstr "包型別："
+
+#: page.php:48 page.php:87
+msgid "Plugin"
+msgstr "外掛"
+
+#: page.php:51 page.php:90
+msgid "Theme"
+msgstr "主題"
+
+#: page.php:58 page.php:97
+msgid "Import"
+msgstr "匯入"
+
+#: page.php:69
+msgid "URL address:"
+msgstr "URL地址："
+
+#: page.php:105
+msgid "Help"
+msgstr "幫助"
+
+#: page.php:107
+msgid ""
+"This plugin provides an innovative translation package installation method."
+msgstr "該外掛提供了創新的翻譯包安裝方法。"
+
+#: page.php:110
+msgid "Old Method"
+msgstr "舊方法"
+
+#: page.php:111
+msgid ""
+"You need to download the translation package to the local first, unzip the "
+"package, and upload it to the correct path via FTP."
+msgstr "你需要先將翻譯包下載到本地，解壓縮該包，再通過FTP將其上傳到正確的路徑中。"
+
+#: page.php:112
+msgid ""
+"Imagine the process of selecting a lengthy path on FTP with the mouse. This is "
+"troublesome, right?"
+msgstr "想象一下用滑鼠在FTP上選取冗長路徑的過程，這很麻煩，對吧？"
+
+#: page.php:115
+msgid "New Method"
+msgstr "新方法"
+
+#: page.php:116
+msgid ""
+"Now you only need to paste the download address of the translation package in "
+"the text input, and correctly select the type of translation package (plugin or "
+"theme), after clicking “Import”, the tool will help you complete all operations."
+msgstr ""
+"現在，你只需要在文字框中貼上翻譯包的下載地址，並正確選擇翻譯包的型別（外掛或主"
+"題），在單擊“匯入”後，該工具將幫助你完成所有操作。"
+
+#: page.php:117
+msgid ""
+"If you have a local translation package, you can also easily import it through "
+"this tool."
+msgstr "如果你有一個本地翻譯包，你也可以通過此工具輕鬆匯入它。"
+
+#: page.php:120
+msgid "Need to translate a WordPress plugin/theme?"
+msgstr "需要翻譯一個WordPress外掛/主題？"
+
+#. translators: %s: https://wpfanyi.com/new-project
+#: page.php:122
+msgid ""
+"If he is hosted in wordpress.org we will handle its translation for free! "
+"Please send your needs to: <a href=\"%s\" target=\"_blank\">https://wpfanyi.com/"
+"new-project</a>."
+msgstr ""
+"如果它託管在WordPress.org中，我們將免費處理它的翻譯！請將你的需求傳送至："
+"https://wpfanyi.com/new-project。"

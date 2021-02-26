@@ -30,6 +30,15 @@ add_action('init', function () {
         define('WPF_DIR_PATH', plugin_dir_path(__FILE__));
         define('WPF_DIR_URL', plugin_dir_url(__FILE__));
 
+        /** Load translation*/
+        $current_locale = get_locale();
+        if (!empty($current_locale)) {
+            $mo_file = dirname(__FILE__) . '/languages/wpfanyi-import-' . $current_locale . ".mo";
+            if (@file_exists($mo_file) && is_readable($mo_file)) {
+                load_textdomain('wpfanyi-import', $mo_file);
+            }
+        }
+
         /** Load core */
         require_once 'core.php';
         new WPfanyi_Import();
