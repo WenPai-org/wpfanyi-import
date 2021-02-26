@@ -83,7 +83,7 @@ class WPfanyi_Import {
      * @param $page string Current page
      */
     public function register_css_and_js($page) {
-        if ('tools_page_wpfanyi_import' !== $page) {
+        if ('tools_page_wpfanyi_import' !== $page && 'index_page_wpfanyi_import' !== $page) {
             return;
         }
 
