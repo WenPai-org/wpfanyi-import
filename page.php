@@ -12,7 +12,7 @@ defined('ABSPATH') || exit;
   <div>
     <div class="notice notice-info">
       <p>
-          <?php esc_html_e('The translation pack is a Zip package including MO and PO files. Select the translation pack on this page and set its type correctly then click Import to add it to WordPress.', 'wpfanyi-import'); ?>
+          <?php esc_html_e('The translation package is a Zip package including MO and PO files. Select the translation pack on this page and set its type correctly then click Import to add it to WordPress.', 'wpfanyi-import'); ?>
         <br/>
         <b><?php esc_html_e('Note: If a translation package with the same name already exists, this operation will overwrite it', 'wpfanyi-import'); ?></b>
       </p>
@@ -104,17 +104,19 @@ defined('ABSPATH') || exit;
         <button type="button" class="handlediv" aria-expanded="true"><span class="toggle-indicator" aria-hidden="true"></span></button>
         <h2 class="handle"><?php esc_html_e('Help', 'wpfanyi-import'); ?></h2>
         <div class="inside">
-          <h2><?php esc_html_e('This plugin provides an innovative translation package installation method.', 'wpfanyi-import'); ?></h2>
+          <h2><?php esc_html_e('common problem:', 'wpfanyi-import'); ?></h2>
           <ol>
             <li>
-              <b><?php esc_html_e('Old Method', 'wpfanyi-import'); ?></b>
-              <p><?php esc_html_e('You need to download the translation package to the local first, unzip the package, and upload it to the correct path via FTP.', 'wpfanyi-import'); ?><br/>
-                  <?php esc_html_e('Imagine the process of selecting a lengthy path on FTP with the mouse. This is troublesome, right?', 'wpfanyi-import'); ?></p>
+              <b><?php esc_html_e('The installed translation package does not work', 'wpfanyi-import'); ?></b>
+              <p><?php esc_html_e('A:Please check whether the translation package contains a valid .mo file.', 'wpfanyi-import'); ?></p>
+              <p><?php esc_html_e('B: Please check whether you have correctly selected the type of translation package (plugin or theme).', 'wpfanyi-import'); ?></p>
+              <p><?php esc_html_e('C: Please upload by traditional manual method to finally confirm whether the translation package is valid.', 'wpfanyi-import'); ?></p>
             </li>
             <li>
-              <b><?php esc_html_e('New Method', 'wpfanyi-import'); ?></b>
-              <p><?php esc_html_e('Now you only need to paste the download address of the translation package in the text input, and correctly select the type of translation package (plugin or theme), after clicking “Import”, the tool will help you complete all operations.', 'wpfanyi-import'); ?><br/>
-                  <?php esc_html_e('If you have a local translation package, you can also easily import it through this tool.', 'wpfanyi-import'); ?></p>
+              <b><?php esc_html_e('Found a bug in this plugin?', 'wpfanyi-import'); ?></b>
+                <?php /* translators: %s: https://github.com/WenPai-org/wpfanyi-import/issues */ ?>
+              <p><?php printf(__('Please submit issues here: <a href="%s" target="_blank">https://github.com/WenPai-org/wpfanyi-import/issues</a>, we will fix it in the next version, thank you for your feedback!', 'wpfanyi-import'), 'https://github.com/WenPai-org/wpfanyi-import/issues'); ?></p>
+
             </li>
           </ol>
           <h2><?php esc_html_e('Need to translate a WordPress plugin/theme?', 'wpfanyi-import'); ?></h2>

@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPfanyi import 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpfanyi-import\n"
-"POT-Creation-Date: 2021-02-26T04:13:20+00:00\n"
-"PO-Revision-Date: 2021-02-26 13:38+0800\n"
+"POT-Creation-Date: 2021-02-26T07:52:18+00:00\n"
+"PO-Revision-Date: 2021-02-26 15:56+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -24,7 +24,7 @@ msgstr "文派翻译导入器"
 msgid ""
 "Install translation package like a theme/plugin, no need for FTP, this tool "
 "will save you a lot of time."
-msgstr "像安装插件、主题那样安装翻译包，无需FTP，这个工具将为你节省大量时间。"
+msgstr "像安装插件、主题那样安装翻译包，无需FTP，这个工具将为您节省大量时间。"
 
 #. Author of the plugin
 msgid "WenPai.org"
@@ -44,7 +44,7 @@ msgstr "翻译导入成功！"
 
 #: core.php:105
 msgid "You don't have the authority to do that"
-msgstr "你无权这样做"
+msgstr "您无权这样做"
 
 #: core.php:111
 msgid "Unexpected translation package type"
@@ -104,9 +104,9 @@ msgstr "导入翻译"
 
 #: page.php:15
 msgid ""
-"The translation pack is a Zip package including MO and PO files. Select the "
-"translation pack on this page and set its type correctly then click Import "
-"to add it to WordPress."
+"The translation package is a Zip package including MO and PO files. Select "
+"the translation pack on this page and set its type correctly then click "
+"Import to add it to WordPress."
 msgstr ""
 "翻译包是一个包含MO和PO文件的Zip包。 在此页面上选择翻译包并正确设置其类型，然"
 "后单击“导入”以将其添加到WordPress。"
@@ -154,57 +154,91 @@ msgid "Help"
 msgstr "帮助"
 
 #: page.php:107
-msgid ""
-"This plugin provides an innovative translation package installation method."
-msgstr "该插件提供了创新的翻译包安装方法。"
+msgid "common problem:"
+msgstr "常见问题："
 
 #: page.php:110
-msgid "Old Method"
-msgstr "旧方法"
+msgid "The installed translation package does not work"
+msgstr "安装的翻译包不起作用"
 
 #: page.php:111
 msgid ""
-"You need to download the translation package to the local first, unzip the "
-"package, and upload it to the correct path via FTP."
-msgstr ""
-"你需要先将翻译包下载到本地，解压缩该包，再通过FTP将其上传到正确的路径中。"
+"A:Please check whether the translation package contains a valid .mo file."
+msgstr "第一步：请检查该翻译包中是否包含有效的 .mo 文件"
 
 #: page.php:112
 msgid ""
-"Imagine the process of selecting a lengthy path on FTP with the mouse. This "
-"is troublesome, right?"
-msgstr "想象一下用鼠标在FTP上选取冗长路径的过程，这很麻烦，对吧？"
+"B: Please check whether you have correctly selected the type of translation "
+"package (plugin or theme)."
+msgstr "第二步：请检查你是否正确选择了翻译包类型（插件或主题）。"
 
-#: page.php:115
-msgid "New Method"
-msgstr "新方法"
+#: page.php:113
+msgid ""
+"C: Please upload by traditional manual method to finally confirm whether the "
+"translation package is valid."
+msgstr "第三步：请通过传统的手工方式上传语言包，以最终确认该语言包是否有效）"
 
 #: page.php:116
+msgid "Found a bug in this plugin?"
+msgstr "发现了这个插件的BUG？"
+
+#. translators: %s: https://github.com/WenPai-org/wpfanyi-import/issues
+#: page.php:118
 msgid ""
-"Now you only need to paste the download address of the translation package "
-"in the text input, and correctly select the type of translation package "
-"(plugin or theme), after clicking “Import”, the tool will help you complete "
-"all operations."
+"Please submit issues here: <a href=\"%s\" target=\"_blank\">https://github."
+"com/WenPai-org/wpfanyi-import/issues</a>, we will fix it in the next "
+"version, thank you for your feedback!"
 msgstr ""
-"现在，你只需要在文本框中粘贴翻译包的下载地址，并正确选择翻译包的类型（插件或"
-"主题），在单击“导入”后，该工具将帮助你完成所有操作。"
+"请在此处提交问题：<a href=\"%s\" target=\"_blank\">https://github.com/WenPai-"
+"org/wpfanyi-import/issues</a>，我们将在下一个版本中对其进行修复，衷心感谢您的"
+"反馈！"
 
-#: page.php:117
-msgid ""
-"If you have a local translation package, you can also easily import it "
-"through this tool."
-msgstr "如果你有一个本地翻译包，你也可以通过此工具轻松导入它。"
-
-#: page.php:120
+#: page.php:122
 msgid "Need to translate a WordPress plugin/theme?"
 msgstr "需要翻译一个WordPress插件/主题？"
 
 #. translators: %s: https://wpfanyi.com/new-project
-#: page.php:122
+#: page.php:124
 msgid ""
 "If he is hosted in wordpress.org we will handle its translation for free! "
 "Please send your needs to: <a href=\"%s\" target=\"_blank\">https://wpfanyi."
 "com/new-project</a>."
 msgstr ""
-"如果它托管在WordPress.org中，我们将免费处理它的翻译！请将你的需求发送至：<a "
+"如果它托管在WordPress.org中，我们将免费处理它的翻译！请将您的需求发送至：<a "
 "href=\"%s\" target=\"_blank\">https://wpfanyi.com/new-project</a>。"
+
+#~ msgid ""
+#~ "This plugin provides an innovative translation package installation "
+#~ "method."
+#~ msgstr "该插件提供了创新的翻译包安装方法。"
+
+#~ msgid "Old Method"
+#~ msgstr "旧方法"
+
+#~ msgid ""
+#~ "You need to download the translation package to the local first, unzip "
+#~ "the package, and upload it to the correct path via FTP."
+#~ msgstr ""
+#~ "您需要先将翻译包下载到本地，解压缩该包，再通过FTP将其上传到正确的路径中。"
+
+#~ msgid ""
+#~ "Imagine the process of selecting a lengthy path on FTP with the mouse. "
+#~ "This is troublesome, right?"
+#~ msgstr "想象一下用鼠标在FTP上选取冗长路径的过程，这很麻烦，对吧？"
+
+#~ msgid "New Method"
+#~ msgstr "新方法"
+
+#~ msgid ""
+#~ "Now you only need to paste the download address of the translation "
+#~ "package in the text input, and correctly select the type of translation "
+#~ "package (plugin or theme), after clicking “Import”, the tool will help "
+#~ "you complete all operations."
+#~ msgstr ""
+#~ "现在，您只需要在文本框中粘贴翻译包的下载地址，并正确选择翻译包的类型（插件"
+#~ "或主题），在单击“导入”后，该工具将帮助您完成所有操作。"
+
+#~ msgid ""
+#~ "If you have a local translation package, you can also easily import it "
+#~ "through this tool."
+#~ msgstr "如果您有一个本地翻译包，您也可以通过此工具轻松导入它。"

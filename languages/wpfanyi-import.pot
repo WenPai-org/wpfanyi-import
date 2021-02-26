@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-02-26T04:13:20+00:00\n"
+"POT-Creation-Date: 2021-02-26T07:52:18+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: wpfanyi-import\n"
@@ -93,7 +93,7 @@ msgid "Import translation"
 msgstr ""
 
 #: page.php:15
-msgid "The translation pack is a Zip package including MO and PO files. Select the translation pack on this page and set its type correctly then click Import to add it to WordPress."
+msgid "The translation package is a Zip package including MO and PO files. Select the translation pack on this page and set its type correctly then click Import to add it to WordPress."
 msgstr ""
 
 #: page.php:17
@@ -141,38 +141,39 @@ msgid "Help"
 msgstr ""
 
 #: page.php:107
-msgid "This plugin provides an innovative translation package installation method."
+msgid "common problem:"
 msgstr ""
 
 #: page.php:110
-msgid "Old Method"
+msgid "The installed translation package does not work"
 msgstr ""
 
 #: page.php:111
-msgid "You need to download the translation package to the local first, unzip the package, and upload it to the correct path via FTP."
+msgid "A:Please check whether the translation package contains a valid .mo file."
 msgstr ""
 
 #: page.php:112
-msgid "Imagine the process of selecting a lengthy path on FTP with the mouse. This is troublesome, right?"
+msgid "B: Please check whether you have correctly selected the type of translation package (plugin or theme)."
 msgstr ""
 
-#: page.php:115
-msgid "New Method"
+#: page.php:113
+msgid "C: Please upload by traditional manual method to finally confirm whether the translation package is valid."
 msgstr ""
 
 #: page.php:116
-msgid "Now you only need to paste the download address of the translation package in the text input, and correctly select the type of translation package (plugin or theme), after clicking “Import”, the tool will help you complete all operations."
+msgid "Found a bug in this plugin?"
 msgstr ""
 
-#: page.php:117
-msgid "If you have a local translation package, you can also easily import it through this tool."
+#. translators: %s: https://github.com/WenPai-org/wpfanyi-import/issues
+#: page.php:118
+msgid "Please submit issues here: <a href=\"%s\" target=\"_blank\">https://github.com/WenPai-org/wpfanyi-import/issues</a>, we will fix it in the next version, thank you for your feedback!"
 msgstr ""
 
-#: page.php:120
+#: page.php:122
 msgid "Need to translate a WordPress plugin/theme?"
 msgstr ""
 
 #. translators: %s: https://wpfanyi.com/new-project
-#: page.php:122
+#: page.php:124
 msgid "If he is hosted in wordpress.org we will handle its translation for free! Please send your needs to: <a href=\"%s\" target=\"_blank\">https://wpfanyi.com/new-project</a>."
 msgstr ""
