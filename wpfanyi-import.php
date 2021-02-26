@@ -8,12 +8,12 @@
  * Domain Path: /languages
  * Version: 1.0.0
  * Network: True
- * License: GPLv3 or later
- * License URI: http://www.gnu.org/licenses/gpl-3.0.html
+ * License: GPLv2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
  * WPfanyi import is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
+ * the Free Software Foundation, either version 2 of the License, or
  * any later version.
  *
  * WPfanyi import is distributed in the hope that it will be useful,

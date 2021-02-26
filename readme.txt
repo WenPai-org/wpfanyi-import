@@ -4,8 +4,8 @@ Requires at least: 5.4
 Tested up to: 5.6
 Requires PHP: 5.6
 Stable tag: 1.0.0
-License: GPLv3
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+License: GPLv2
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Install language package like a theme/plugin, no need for FTP, this tool will save you a lot of time.
 
