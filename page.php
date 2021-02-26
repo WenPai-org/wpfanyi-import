@@ -104,17 +104,17 @@ defined('ABSPATH') || exit;
         <button type="button" class="handlediv" aria-expanded="true"><span class="toggle-indicator" aria-hidden="true"></span></button>
         <h2 class="handle"><?php esc_html_e('Help', 'wpfanyi-import'); ?></h2>
         <div class="inside">
-          <h2><?php esc_html_e('This plugin provides an innovative language package installation method.', 'wpfanyi-import'); ?></h2>
+          <h2><?php esc_html_e('This plugin provides an innovative translation package installation method.', 'wpfanyi-import'); ?></h2>
           <ol>
             <li>
               <b><?php esc_html_e('Old Method', 'wpfanyi-import'); ?></b>
-              <p><?php esc_html_e('You need to download the language package to the local first, unzip the package, and upload it to the correct path via FTP.', 'wpfanyi-import'); ?><br/>
+              <p><?php esc_html_e('You need to download the translation package to the local first, unzip the package, and upload it to the correct path via FTP.', 'wpfanyi-import'); ?><br/>
                   <?php esc_html_e('Imagine the process of selecting a lengthy path on FTP with the mouse. This is troublesome, right?', 'wpfanyi-import'); ?></p>
             </li>
             <li>
               <b><?php esc_html_e('New Method', 'wpfanyi-import'); ?></b>
-              <p><?php esc_html_e('Now you only need to paste the download address of the language package in the text input, and correctly select the type of language package (plugin or theme), after clicking “Import”, the tool will help you complete all operations.', 'wpfanyi-import'); ?><br/>
-                  <?php esc_html_e('If you have a local language package, you can also easily import it through this tool.', 'wpfanyi-import'); ?></p>
+              <p><?php esc_html_e('Now you only need to paste the download address of the translation package in the text input, and correctly select the type of translation package (plugin or theme), after clicking “Import”, the tool will help you complete all operations.', 'wpfanyi-import'); ?><br/>
+                  <?php esc_html_e('If you have a local translation package, you can also easily import it through this tool.', 'wpfanyi-import'); ?></p>
             </li>
           </ol>
           <h2><?php esc_html_e('Need to translate a WordPress plugin/theme?', 'wpfanyi-import'); ?></h2>
