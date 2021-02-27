@@ -60,10 +60,14 @@ class WPfanyi_Import {
     public function wpfanyi_import_page() {
         /** If it is a post request, the form value is processed */
         if (isset($_SERVER['REQUEST_METHOD']) && 'POST' === strtoupper($_SERVER['REQUEST_METHOD'])) {
-            $this->trans_import_method = @$_POST['trans_import_method'];
-            $this->trans_type = @$_POST['trans_type'];
-            $this->trans_zip = @$_FILES['trans_zip'];
-            $this->trans_url = @$_POST['trans_url'];
+            $this->trans_import_method = sanitize_text_field($_POST['trans_import_method']);
+            $this->trans_type = sanitize_text_field($_POST['trans_type']);
+            $this->trans_zip = [
+                'name'      => sanitize_text_field(@$_FILES['trans_zip']['name']),
+                'type'      => sanitize_text_field(@$_FILES['trans_zip']['type']),
+                'tmp_name'  => sanitize_text_field(@$_FILES['trans_zip']['tmp_name']),
+            ];
+            $this->trans_url = esc_url($_POST['trans_url']);
 
             if ($this->data_verify()) {
                 if ($this->import_trans()) {
