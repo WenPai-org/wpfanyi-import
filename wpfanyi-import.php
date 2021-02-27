@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: WPfanyi import
- * Description: Install translation package like a theme/plugin, no need for FTP, this tool will save you a lot of time.
+ * Description: Install translation package like a theme/plugin, no need for FTP. this tool will save you a lot of time.
  * Author: WenPai.org
  * Author URI:https://wenpai.org/
  * Text Domain: wpfanyi-import

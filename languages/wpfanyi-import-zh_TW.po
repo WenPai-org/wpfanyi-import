@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpfanyi-import\n"
-"POT-Creation-Date: 2021-02-26T07:52:18+00:00\n"
-"PO-Revision-Date: 2021-02-27 13:55+0800\n"
+"POT-Creation-Date: 2021-02-27T05:59:50+00:00\n"
+"PO-Revision-Date: 2021-02-27 14:00+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -20,9 +20,9 @@ msgstr "文派翻譯匯入器"
 
 #. Description of the plugin
 msgid ""
-"Install translation package like a theme/plugin, no need for FTP, this tool "
+"Install translation package like a theme/plugin, no need for FTP. this tool "
 "will save you a lot of time."
-msgstr "像安裝外掛、主題那樣安裝翻譯包，無需FTP，這個工具將為您節省大量時間。"
+msgstr "像安裝外掛、主題那樣安裝翻譯包，無需FTP。這個工具將為您節省大量時間。"
 
 #. Author of the plugin
 msgid "WenPai.org"
@@ -36,51 +36,51 @@ msgstr "https://wenpai.org/"
 msgid "import translation"
 msgstr "匯入翻譯"
 
-#: core.php:70
+#: core.php:74
 msgid "Translation imported successfully!"
 msgstr "翻譯匯入成功！"
 
-#: core.php:105
+#: core.php:109
 msgid "You don't have the authority to do that"
 msgstr "您無權這樣做"
 
-#: core.php:111
+#: core.php:115
 msgid "Unexpected translation package type"
 msgstr "意外的翻譯包型別"
 
-#: core.php:118
+#: core.php:122
 msgid "Translation package not selected"
 msgstr "沒有選擇翻譯包"
 
-#: core.php:123
+#: core.php:127
 msgid "The translation package should be in ZIP format"
 msgstr "翻譯包應為ZIP格式"
 
-#: core.php:130
+#: core.php:134
 msgid "Invalid URL format"
 msgstr "錯誤的URL格式"
 
-#: core.php:135
+#: core.php:139
 msgid "Parameter error: unknown translation package import method"
 msgstr "引數錯誤：翻譯包匯入方法未知"
 
-#: core.php:157
+#: core.php:161
 msgid ""
 "Translation package upload failed, please check whether the file system "
 "permissions are normal"
 msgstr "翻譯包上傳失敗，請檢查檔案系統許可權是否正常"
 
-#: core.php:159
+#: core.php:163
 msgid ""
 "Translation package acquisition failed, please check whether the URL is valid"
 msgstr "獲取翻譯包失敗，請檢查URL是否有效"
 
 #. translators: %s: Translation storage directory
-#: core.php:172
+#: core.php:176
 msgid "The translation storage directory of this WordPress is not writable：%s"
 msgstr "該WordPress的翻譯儲存目錄不可寫：％s"
 
-#: core.php:179
+#: core.php:183
 msgid ""
 "This server doesn‘t support the decompression of Zip archives. Please "
 "contact the service provider of this server to enable the zip extension "
@@ -89,11 +89,11 @@ msgstr ""
 "此伺服器不支援解壓ZIP包。 請與伺服器提供商聯絡以啟用PHP的zip擴充套件模組功"
 "能。"
 
-#: core.php:187
+#: core.php:191
 msgid "Failed to parse the Zip package. The Zip package may be damaged"
 msgstr "無法解析ZIP包，該包可能已損壞"
 
-#: core.php:208
+#: core.php:212
 msgid "There are no valid Po and Mo files in the current translation package"
 msgstr "當前翻譯包中沒有有效的Po和Mo檔案"
 
@@ -163,7 +163,7 @@ msgstr "安裝的翻譯包不起作用"
 #: page.php:111
 msgid ""
 "A:Please check whether the translation package contains a valid .mo file."
-msgstr "第一步：請檢查該翻譯包中是否包含有效的 .mo 檔案"
+msgstr "第一步：請檢查該翻譯包中是否包含有效的 .mo 檔案。"
 
 #: page.php:112
 msgid ""

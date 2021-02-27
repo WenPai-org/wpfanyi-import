@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-02-26T07:52:18+00:00\n"
+"POT-Creation-Date: 2021-02-27T05:59:50+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: wpfanyi-import\n"
@@ -19,7 +19,7 @@ msgid "WPfanyi import"
 msgstr ""
 
 #. Description of the plugin
-msgid "Install translation package like a theme/plugin, no need for FTP, this tool will save you a lot of time."
+msgid "Install translation package like a theme/plugin, no need for FTP. this tool will save you a lot of time."
 msgstr ""
 
 #. Author of the plugin
@@ -35,56 +35,56 @@ msgstr ""
 msgid "import translation"
 msgstr ""
 
-#: core.php:70
+#: core.php:74
 msgid "Translation imported successfully!"
 msgstr ""
 
-#: core.php:105
+#: core.php:109
 msgid "You don't have the authority to do that"
 msgstr ""
 
-#: core.php:111
+#: core.php:115
 msgid "Unexpected translation package type"
 msgstr ""
 
-#: core.php:118
+#: core.php:122
 msgid "Translation package not selected"
 msgstr ""
 
-#: core.php:123
+#: core.php:127
 msgid "The translation package should be in ZIP format"
 msgstr ""
 
-#: core.php:130
+#: core.php:134
 msgid "Invalid URL format"
 msgstr ""
 
-#: core.php:135
+#: core.php:139
 msgid "Parameter error: unknown translation package import method"
 msgstr ""
 
-#: core.php:157
+#: core.php:161
 msgid "Translation package upload failed, please check whether the file system permissions are normal"
 msgstr ""
 
-#: core.php:159
+#: core.php:163
 msgid "Translation package acquisition failed, please check whether the URL is valid"
 msgstr ""
 
 #. translators: %s: Translation storage directory
-#: core.php:172
+#: core.php:176
 msgid "The translation storage directory of this WordPress is not writable：%s"
 msgstr ""
 
-#: core.php:179
+#: core.php:183
 msgid "This server doesn‘t support the decompression of Zip archives. Please contact the service provider of this server to enable the zip extension module function of PHP."
 msgstr ""
 
-#: core.php:187
+#: core.php:191
 msgid "Failed to parse the Zip package. The Zip package may be damaged"
 msgstr ""
 
-#: core.php:208
+#: core.php:212
 msgid "There are no valid Po and Mo files in the current translation package"
 msgstr ""
 

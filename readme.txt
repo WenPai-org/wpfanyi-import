@@ -7,7 +7,7 @@ Stable tag: 1.0.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Install translation package like a theme/plugin, no need for FTP, this tool will save you a lot of time.
+Install translation package like a theme/plugin, no need for FTP. this tool will save you a lot of time.
 
 == Description ==
 ### This plugin provides an innovative translation package installation method. ###
