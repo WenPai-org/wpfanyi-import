@@ -104,7 +104,7 @@ class WPfanyi_Import {
      * @return bool true on success or false on failure.
      */
     private function data_verify() {
-        if (!current_user_can( 'install_plugins' ) || !(isset($_POST['_wpnonce']) &&
+        if (!current_user_can('install_plugins') || !(isset($_POST['_wpnonce']) &&
             wp_verify_nonce($_POST['_wpnonce'], 'wpfanyi-import-nonce'))) {
             $this->error_msg(__('You don\'t have the authority to do that', 'wpfanyi-import'));
 

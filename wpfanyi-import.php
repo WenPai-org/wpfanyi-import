@@ -22,15 +22,15 @@
  * GNU General Public License for more details.
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 add_action('init', function () {
-    if (is_admin() && current_user_can( 'install_plugins' )) {
+    if (is_admin() && current_user_can('install_plugins')) {
         define('WPF_VERSION', '1.0.0');
         define('WPF_DIR_PATH', plugin_dir_path(__FILE__));
         define('WPF_DIR_URL', plugin_dir_url(__FILE__));
 
-        /** Load translation*/
+        /** Load translation */
         $current_locale = get_locale();
         if (!empty($current_locale)) {
             $mo_file = dirname(__FILE__) . '/languages/wpfanyi-import-' . $current_locale . ".mo";
