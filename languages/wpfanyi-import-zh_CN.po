@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: WPfanyi import 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpfanyi-import\n"
 "POT-Creation-Date: 2021-02-26T07:52:18+00:00\n"
-"PO-Revision-Date: 2021-02-26 15:56+0800\n"
+"PO-Revision-Date: 2021-02-27 13:55+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -176,7 +176,7 @@ msgstr "第二步：请检查你是否正确选择了翻译包类型（插件或
 msgid ""
 "C: Please upload by traditional manual method to finally confirm whether the "
 "translation package is valid."
-msgstr "第三步：请通过传统的手工方式上传语言包，以最终确认该语言包是否有效）"
+msgstr "第三步：请通过传统的手工方式上传语言包，以最终确认该语言包是否有效。"
 
 #: page.php:116
 msgid "Found a bug in this plugin?"
