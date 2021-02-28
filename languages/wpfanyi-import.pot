@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-02-28T15:48:49+00:00\n"
+"POT-Creation-Date: 2021-02-28T16:28:50+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: wpfanyi-import\n"
@@ -72,19 +72,23 @@ msgid "Translation package acquisition failed, please check whether the URL is v
 msgstr ""
 
 #. translators: %s: Translation storage directory
-#: core.php:176
+#: core.php:174
 msgid "The translation storage directory of this WordPress is not writable：%s"
 msgstr ""
 
-#: core.php:183
+#: core.php:181
+msgid "WordPress translation storage directory does not exist and an error occurred when trying to create it. Please refer to PHP warning output for specific error information."
+msgstr ""
+
+#: core.php:189
 msgid "This server doesn‘t support the decompression of Zip archives. Please contact the service provider of this server to enable the zip extension module function of PHP."
 msgstr ""
 
-#: core.php:191
+#: core.php:197
 msgid "Failed to parse the Zip package. The Zip package may be damaged"
 msgstr ""
 
-#: core.php:212
+#: core.php:218
 msgid "There are no valid Po and Mo files in the current translation package"
 msgstr ""
 

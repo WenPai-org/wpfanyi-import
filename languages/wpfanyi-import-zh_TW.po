@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpfanyi-import\n"
-"POT-Creation-Date: 2021-02-28T15:48:49+00:00\n"
-"PO-Revision-Date: 2021-02-28 23:50+0800\n"
+"POT-Creation-Date: 2021-02-28T16:28:50+00:00\n"
+"PO-Revision-Date: 2021-03-01 00:30+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -76,11 +76,19 @@ msgid ""
 msgstr "獲取翻譯包失敗，請檢查URL是否有效"
 
 #. translators: %s: Translation storage directory
-#: core.php:176
+#: core.php:174
 msgid "The translation storage directory of this WordPress is not writable：%s"
 msgstr "該WordPress的翻譯儲存目錄不可寫：%s"
 
-#: core.php:183
+#: core.php:181
+msgid ""
+"WordPress translation storage directory does not exist and an error occurred "
+"when trying to create it. Please refer to PHP warning output for specific "
+"error information."
+msgstr ""
+"WordPress翻譯儲存目錄不存在，嘗試建立時出錯。具體錯誤資訊請參考PHP警告輸出。"
+
+#: core.php:189
 msgid ""
 "This server doesn‘t support the decompression of Zip archives. Please "
 "contact the service provider of this server to enable the zip extension "
@@ -89,11 +97,11 @@ msgstr ""
 "此伺服器不支援解壓ZIP包。 請與伺服器提供商聯絡以啟用PHP的zip擴充套件模組功"
 "能。"
 
-#: core.php:191
+#: core.php:197
 msgid "Failed to parse the Zip package. The Zip package may be damaged"
 msgstr "無法解析ZIP包，該包可能已損壞"
 
-#: core.php:212
+#: core.php:218
 msgid "There are no valid Po and Mo files in the current translation package"
 msgstr "當前翻譯包中沒有有效的Po和Mo檔案"
 

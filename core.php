@@ -152,7 +152,7 @@ class WPfanyi_Import {
      * @return bool true on success or false on failure.
      */
     private function import_trans() {
-        $trans_dir = WP_CONTENT_DIR . "/languages/{$this->trans_type}s";
+        $wp_trans_storage_dir = WP_CONTENT_DIR . "/languages/{$this->trans_type}s";
 
         $trans_zip_file = 'file' === $this->trans_import_method ? @$this->trans_zip['tmp_name'] : download_url($this->trans_url, $timeout = 1000);
 
@@ -166,14 +166,20 @@ class WPfanyi_Import {
             return false;
         }
 
-        if(!is_writable($trans_dir)) {
-            /**
-             * When it is found that the translation directory isn't writable, try to create a new directory.
-             * If it fails, it proves that there is a problem with the file system permissions.
-             */
-            if (!mkdir($trans_dir, 0775, true)) {
+        if (!is_writable($wp_trans_storage_dir)) {
+            if (file_exists($wp_trans_storage_dir)) {
+                /** dir exist but it is not writable */
+
                 /* translators: %s: Translation storage directory */
-                $this->error_msg(sprintf(__('The translation storage directory of this WordPress is not writable：%s', 'wpfanyi-import'), $trans_dir));
+                $this->error_msg(sprintf(__('The translation storage directory of this WordPress is not writable：%s', 'wpfanyi-import'), $wp_trans_storage_dir));
+
+                return false;
+            } else {
+                /** translation store directory does not exist */
+
+                if (!mkdir($wp_trans_storage_dir, 0775, true)) {
+                    $this->error_msg(__('WordPress translation storage directory does not exist and an error occurred when trying to create it. Please refer to PHP warning output for specific error information.', 'wpfanyi-import'));
+                }
 
                 return false;
             }
@@ -214,7 +220,7 @@ class WPfanyi_Import {
             return false;
         }
 
-        $zip->extractTo($trans_dir, $trans_file_list);
+        $zip->extractTo($wp_trans_storage_dir, $trans_file_list);
         $zip->close();
 
         /** Try to delete the temporary file after all operations */
