@@ -27,7 +27,7 @@ class WPfanyi_Import {
      *
      * @since 1.0.0
      */
-    private $trans_zip = [];
+    private $trans_zip = array();
 
     /**
      * @var string Translation package URL
@@ -45,11 +45,11 @@ class WPfanyi_Import {
                 __('import translation', 'wpfanyi-import'),
                 is_multisite() ? 'manage_network_options' : 'manage_options',
                 'wpfanyi_import',
-                [$this, 'wpfanyi_import_page']
+                array($this, 'wpfanyi_import_page')
             );
         });
 
-        add_action('admin_enqueue_scripts', [$this, 'register_css_and_js']);
+        add_action('admin_enqueue_scripts', array($this, 'register_css_and_js'));
     }
 
     /**
@@ -62,11 +62,11 @@ class WPfanyi_Import {
         if (isset($_SERVER['REQUEST_METHOD']) && 'POST' === strtoupper($_SERVER['REQUEST_METHOD'])) {
             $this->trans_import_method = sanitize_text_field($_POST['trans_import_method']);
             $this->trans_type = sanitize_text_field($_POST['trans_type']);
-            $this->trans_zip = [
+            $this->trans_zip = array(
                 'name'      => sanitize_text_field(@$_FILES['trans_zip']['name']),
                 'type'      => sanitize_text_field(@$_FILES['trans_zip']['type']),
                 'tmp_name'  => sanitize_text_field(@$_FILES['trans_zip']['tmp_name']),
-            ];
+            );
             $this->trans_url = esc_url($_POST['trans_url']);
 
             if ($this->data_verify()) {
@@ -91,9 +91,9 @@ class WPfanyi_Import {
             return;
         }
 
-        wp_enqueue_script('sisyphus', WPF_DIR_URL . 'assets/js/sisyphus.min.js', [], WPF_VERSION);
-        wp_enqueue_script('wpf', WPF_DIR_URL . 'assets/js/wpf.js', ['jquery', 'sisyphus'], WPF_VERSION, true);
-        wp_enqueue_style('wpf-style', WPF_DIR_URL . 'assets/css/wpf-style.css', [], WPF_VERSION);
+        wp_enqueue_script('sisyphus', WPF_DIR_URL . 'assets/js/sisyphus.min.js', array(), WPF_VERSION);
+        wp_enqueue_script('wpf', WPF_DIR_URL . 'assets/js/wpf.js', array('jquery', 'sisyphus'), WPF_VERSION, true);
+        wp_enqueue_style('wpf-style', WPF_DIR_URL . 'assets/css/wpf-style.css', array(), WPF_VERSION);
     }
 
     /**
@@ -196,7 +196,7 @@ class WPfanyi_Import {
          *
          * @since 1.0.0
          */
-        $trans_file_list = [];
+        $trans_file_list = array();
 
         /** Read valid Mo and Po files from the translation package to prevent code injection */
         for ($i = 0; $i < $zip->numFiles; $i++) {
