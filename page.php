@@ -49,6 +49,9 @@ defined('ABSPATH') || exit;
                     <label>
                       <input type="radio" name="trans_type" value="theme"/>
                         <?php esc_html_e('Theme', 'wpfanyi-import'); ?></label>
+                    <label>
+                      <input type="radio" name="trans_type" value="auto"/>
+                        <?php esc_html_e('Auto', 'wpfanyi-import'); ?></label>
                   </td>
                 </tr>
                 </tbody>
@@ -88,6 +91,9 @@ defined('ABSPATH') || exit;
                     <label>
                       <input type="radio" name="trans_type" value="theme"/>
                         <?php esc_html_e('Theme', 'wpfanyi-import'); ?></label>
+                    <label>
+                      <input type="radio" name="trans_type" value="auto"/>
+                        <?php esc_html_e('Auto', 'wpfanyi-import'); ?></label>
                   </td>
                 </tr>
                 </tbody>

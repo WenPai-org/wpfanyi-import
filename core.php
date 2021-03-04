@@ -118,7 +118,7 @@ class WPfanyi_Import {
             return false;
         }
 
-        if ('plugin' !== $this->trans_type && 'theme' !== $this->trans_type) {
+        if ('plugin' !== $this->trans_type && 'theme' !== $this->trans_type && 'auto' !== $this->trans_type) {
             $this->error_msg(__('Unexpected translation package type', 'wpfanyi-import'));
 
             return false;
@@ -177,25 +177,64 @@ class WPfanyi_Import {
             return false;
         }
 
-        $trans_files = [];
-        foreach (scandir($trans_tmp_dir) as $filename) {
-            $trans_files[] = "{$trans_tmp_dir}/{$filename}";
+        $trans_types = [];
+        if ('auto' === $this->trans_type) {
+            $trans_types = $this->get_trans_type($trans_tmp_dir);
+            if (!$trans_types) {
+                return false;
+            }
+        } else {
+            $trans_types[$this->trans_type] = '';
         }
 
-        $trans_files = $this->prepare_trans_file($trans_files);
-        if (!$trans_files) {
-            return false;
-        }
+        foreach ($trans_types as $trans_type => $trans_dir) {
+            $trans_files = [];
+            foreach (scandir($trans_tmp_dir) as $filename) {
+                $trans_files[] = "{$trans_tmp_dir}{$trans_dir}/{$filename}";
+            }
 
-        $res = $this->save_to_trans_dir($trans_files, $this->trans_type);
-        if (!$res) {
-            return false;
+            $trans_files = $this->prepare_trans_file($trans_files);
+            if ( ! $trans_files) {
+                return false;
+            }
+
+            $res = $this->save_to_trans_dir($trans_files, $trans_type);
+            if ( ! $res) {
+                return false;
+            }
         }
 
         /** Try to delete the temporary file after all operations */
         @unlink($trans_zip_file);
 
         return true;
+    }
+
+    /**
+     * Get translation type according to directory structure
+     *
+     * @param string $dir Directory to check
+     *
+     * @return false|array The translation types contained in the directory and their corresponding directories, such as ['plugin '= >'plugins']
+     */
+    private function get_trans_type($dir) {
+        $data = [];
+
+        foreach (scandir($dir) as $item) {
+            if ('plugin' === $item || 'plugins' === $item) {
+                $data['plugin'] = "/{$item}";
+            } elseif ('theme' === $item || 'themes' === $item) {
+                $data['theme'] = "/{$item}";
+            }
+        }
+
+        if (empty($data)) {
+            $this->error_msg(__('No translation package was successfully identified.', 'wpfanyi-import'));
+
+            return false;
+        }
+
+        return $data;
     }
 
     /**
