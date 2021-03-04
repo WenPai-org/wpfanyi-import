@@ -49,6 +49,13 @@ class WPfanyi_Import {
             );
         });
 
+        add_filter(sprintf('%splugin_action_links_%s', is_multisite() ? 'network_admin_' : '', WPF_BASE_NAME), function ($links) {
+            return array_merge(
+                [sprintf('<a href="%s">%s</a>', is_multisite() ? network_admin_url('index.php?page=wpfanyi_import') : admin_url('tools.php?page=wpfanyi_import'), 'import')],
+                $links
+            );
+        });
+
         add_action('admin_enqueue_scripts', array($this, 'register_css_and_js'));
     }
 
