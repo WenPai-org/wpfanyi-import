@@ -29,6 +29,7 @@ add_action('init', function () {
         define('WPF_VERSION', '1.1.0');
         define('WPF_DIR_PATH', plugin_dir_path(__FILE__));
         define('WPF_DIR_URL', plugin_dir_url(__FILE__));
+        define('WPF_BASE_NAME', plugin_basename(__FILE__));
 
         /** Load translation */
         $current_locale = get_locale();
