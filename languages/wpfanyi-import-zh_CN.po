@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPfanyi import 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpfanyi-import\n"
-"POT-Creation-Date: 2021-02-28T16:28:50+00:00\n"
-"PO-Revision-Date: 2021-03-01 00:29+0800\n"
+"POT-Creation-Date: 2021-03-04T08:13:36+00:00\n"
+"PO-Revision-Date: 2021-03-04 16:15+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -38,59 +38,58 @@ msgstr "https://wenpai.org/"
 msgid "import translation"
 msgstr "导入翻译"
 
-#: core.php:74
+#: core.php:81
 msgid "Translation imported successfully!"
 msgstr "翻译导入成功！"
 
-#: core.php:109
+#: core.php:116
 msgid "You don't have the authority to do that"
 msgstr "您无权这样做"
 
-#: core.php:115
+#: core.php:122
 msgid "Unexpected translation package type"
 msgstr "意外的翻译包类型"
 
-#: core.php:122
+#: core.php:129
 msgid "Translation package not selected"
 msgstr "没有选择翻译包"
 
-#: core.php:127
+#: core.php:134
 msgid "The translation package should be in ZIP format"
 msgstr "翻译包应为ZIP格式"
 
-#: core.php:134
+#: core.php:141
 msgid "Invalid URL format"
 msgstr "错误的URL格式"
 
-#: core.php:139
+#: core.php:146
 msgid "Parameter error: unknown translation package import method"
 msgstr "参数错误：翻译包导入方法未知"
 
-#: core.php:161
+#: core.php:167
 msgid ""
 "Translation package upload failed, please check whether the file system "
 "permissions are normal"
 msgstr "翻译包上传失败，请检查文件系统权限是否正常"
 
-#: core.php:163
+#: core.php:169
 msgid ""
 "Translation package acquisition failed, please check whether the URL is valid"
 msgstr "获取翻译包失败，请检查URL是否有效"
 
-#. translators: %s: Translation storage directory
-#: core.php:174
-msgid "The translation storage directory of this WordPress is not writable：%s"
-msgstr "该WordPress的翻译存储目录不可写：%s"
+#: core.php:232
+msgid "No translation package was successfully identified."
+msgstr "未成功识别任何翻译包。"
 
-#: core.php:181
-msgid ""
-"WordPress translation storage directory does not exist and an error occurred "
-"when trying to create it. Please refer to PHP warning output for specific "
-"error information."
-msgstr ""
-"WordPress翻译存储目录不存在，尝试创建时出错。具体错误信息请参考PHP警告输出。"
+#: core.php:252
+msgid "The PHP temporary directory was not recognized"
+msgstr "无法识别PHP临时目录"
 
-#: core.php:189
+#: core.php:262
+msgid "PHP temporary directory is not writable."
+msgstr "PHP临时目录不可写。"
+
+#: core.php:273
 msgid ""
 "This server doesn‘t support the decompression of Zip archives. Please "
 "contact the service provider of this server to enable the zip extension "
@@ -98,13 +97,22 @@ msgid ""
 msgstr ""
 "此服务器不支持解压ZIP包。 请与服务器提供商联系以启用PHP的zip扩展模块功能。"
 
-#: core.php:197
+#: core.php:281
 msgid "Failed to parse the Zip package. The Zip package may be damaged"
 msgstr "无法解析ZIP包，该包可能已损坏"
 
-#: core.php:218
-msgid "There are no valid Po and Mo files in the current translation package"
-msgstr "当前翻译包中没有有效的Po和Mo文件"
+#. translators: %s: Translation storage directory
+#: core.php:308
+msgid "The translation storage directory of this WordPress is not writable：%s"
+msgstr "该WordPress的翻译存储目录不可写：%s"
+
+#: core.php:315
+msgid ""
+"WordPress translation storage directory does not exist and an error occurred "
+"when trying to create it. Please refer to PHP warning output for specific "
+"error information."
+msgstr ""
+"WordPress翻译存储目录不存在，尝试创建时出错。具体错误信息请参考PHP警告输出。"
 
 #: page.php:11
 msgid "Import translation"
@@ -137,61 +145,65 @@ msgstr "从URL导入"
 msgid "Translation package:"
 msgstr "翻译包："
 
-#: page.php:44 page.php:83
+#: page.php:44 page.php:86
 msgid "Package type:"
 msgstr "包类型："
 
-#: page.php:48 page.php:87
+#: page.php:48 page.php:90
 msgid "Plugin"
 msgstr "插件"
 
-#: page.php:51 page.php:90
+#: page.php:51 page.php:93
 msgid "Theme"
 msgstr "主题"
 
-#: page.php:58 page.php:97
+#: page.php:54 page.php:96
+msgid "Auto"
+msgstr "自动"
+
+#: page.php:61 page.php:103
 msgid "Import"
 msgstr "导入"
 
-#: page.php:69
+#: page.php:72
 msgid "URL address:"
 msgstr "URL地址："
 
-#: page.php:105
+#: page.php:111
 msgid "Help"
 msgstr "帮助"
 
-#: page.php:107
+#: page.php:113
 msgid "common problem:"
 msgstr "常见问题："
 
-#: page.php:110
+#: page.php:116
 msgid "The installed translation package does not work"
 msgstr "安装的翻译包不起作用"
 
-#: page.php:111
+#: page.php:117
 msgid ""
 "A:Please check whether the translation package contains a valid .mo file."
 msgstr "第一步：请检查该翻译包中是否包含有效的 .mo 文件。"
 
-#: page.php:112
+#: page.php:118
 msgid ""
 "B: Please check whether you have correctly selected the type of translation "
 "package (plugin or theme)."
 msgstr "第二步：请检查你是否正确选择了翻译包类型（插件或主题）。"
 
-#: page.php:113
+#: page.php:119
 msgid ""
 "C: Please upload by traditional manual method to finally confirm whether the "
 "translation package is valid."
 msgstr "第三步：请通过传统的手工方式上传语言包，以最终确认该语言包是否有效。"
 
-#: page.php:116
+#: page.php:122
 msgid "Found a bug in this plugin?"
 msgstr "发现了这个插件的BUG？"
 
 #. translators: %s: https://github.com/WenPai-org/wpfanyi-import/issues
-#: page.php:118
+#: page.php:124
 msgid ""
 "Please submit issues here: <a href=\"%s\" target=\"_blank\">https://github."
 "com/WenPai-org/wpfanyi-import/issues</a>, we will fix it in the next "
@@ -201,12 +213,12 @@ msgstr ""
 "org/wpfanyi-import/issues</a>，我们将在下一个版本中对其进行修复，衷心感谢您的"
 "反馈！"
 
-#: page.php:122
+#: page.php:128
 msgid "Need to translate a WordPress plugin/theme?"
 msgstr "需要翻译一个WordPress插件/主题？"
 
 #. translators: %s: https://wpfanyi.com/new-project
-#: page.php:124
+#: page.php:130
 msgid ""
 "If he is hosted in wordpress.org we will handle its translation for free! "
 "Please send your needs to: <a href=\"%s\" target=\"_blank\">https://wpfanyi."
@@ -214,6 +226,10 @@ msgid ""
 msgstr ""
 "如果它托管在WordPress.org中，我们将免费处理它的翻译！请将您的需求发送至：<a "
 "href=\"%s\" target=\"_blank\">https://wpfanyi.com/new-project</a>。"
+
+#~ msgid ""
+#~ "There are no valid Po and Mo files in the current translation package"
+#~ msgstr "当前翻译包中没有有效的Po和Mo文件"
 
 #~ msgid ""
 #~ "This plugin provides an innovative translation package installation "
