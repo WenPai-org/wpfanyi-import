@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPfanyi import 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpfanyi-import\n"
-"POT-Creation-Date: 2021-03-04T08:13:36+00:00\n"
-"PO-Revision-Date: 2021-03-04 16:15+0800\n"
+"POT-Creation-Date: 2021-03-04T08:21:12+00:00\n"
+"PO-Revision-Date: 2021-03-04 16:23+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -37,6 +37,12 @@ msgstr "https://wenpai.org/"
 #: core.php:44 core.php:45
 msgid "import translation"
 msgstr "导入翻译"
+
+#: core.php:54
+#, fuzzy
+#| msgid "Import"
+msgid "import"
+msgstr "导入"
 
 #: core.php:81
 msgid "Translation imported successfully!"
@@ -159,7 +165,7 @@ msgstr "主题"
 
 #: page.php:54 page.php:96
 msgid "Auto"
-msgstr "自动"
+msgstr "自动识别"
 
 #: page.php:61 page.php:103
 msgid "Import"
