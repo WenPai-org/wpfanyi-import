@@ -156,13 +156,12 @@ class WPfanyi_Import {
      *
      * @since 1.0.0
      *
+     * @todo It might be better to introduce exceptions to return errors
+     *
      * @return bool true on success or false on failure.
      */
     private function import_trans() {
-        $wp_trans_storage_dir = WP_CONTENT_DIR . "/languages/{$this->trans_type}s";
-
         $trans_zip_file = 'file' === $this->trans_import_method ? @$this->trans_zip['tmp_name'] : download_url($this->trans_url, $timeout = 1000);
-
         if(!file_exists($trans_zip_file) && filesize($trans_zip_file) > 0) {
             if ('file' === $this->trans_import_method) {
                 $this->error_msg(__('Translation package upload failed, please check whether the file system permissions are normal', 'wpfanyi-import'));
@@ -173,22 +172,61 @@ class WPfanyi_Import {
             return false;
         }
 
-        if (!is_writable($wp_trans_storage_dir)) {
-            if (file_exists($wp_trans_storage_dir)) {
-                /** dir exist but it is not writable */
+        $trans_tmp_dir = $this->unzip($trans_zip_file);
+        if (!$trans_tmp_dir) {
+            return false;
+        }
 
-                /* translators: %s: Translation storage directory */
-                $this->error_msg(sprintf(__('The translation storage directory of this WordPress is not writable：%s', 'wpfanyi-import'), $wp_trans_storage_dir));
+        $trans_files = [];
+        foreach (scandir($trans_tmp_dir) as $filename) {
+            $trans_files[] = "{$trans_tmp_dir}/{$filename}";
+        }
 
-                return false;
-            } else {
-                /** translation store directory does not exist */
+        $trans_files = $this->prepare_trans_file($trans_files);
+        if (!$trans_files) {
+            return false;
+        }
 
-                if (!mkdir($wp_trans_storage_dir, 0775, true)) {
-                    $this->error_msg(__('WordPress translation storage directory does not exist and an error occurred when trying to create it. Please refer to PHP warning output for specific error information.', 'wpfanyi-import'));
+        $res = $this->save_to_trans_dir($trans_files, $this->trans_type);
+        if (!$res) {
+            return false;
+        }
+
+        /** Try to delete the temporary file after all operations */
+        @unlink($trans_zip_file);
+
+        return true;
+    }
+
+    /**
+     * unzip the zip to the PHP temporary directory
+     *
+     * @since 1.1.0
+     *
+     * @param string $zip_filename zip file
+     *
+     * @return false|string tmp dir on success or false on failure.
+     */
+    private function unzip($zip_filename) {
+        $tmp_dir = get_temp_dir();
+        if (empty($tmp_dir)) {
+            $this->error_msg(__('The PHP temporary directory was not recognized', 'wpfanyi-import'));
+
+            return false;
+        }
+
+        for ($i = 0; $i < 10; $i++) {
+            $rand_dir = md5(rand());
+
+            if (!file_exists($rand_dir)) {
+                if (!mkdir($tmp_dir . $rand_dir, 0775)) {
+                    $this->error_msg(__('PHP temporary directory is not writable.', 'wpfanyi-import'));
+
+                    return false;
                 }
 
-                return false;
+                $tmp_dir .= $rand_dir;
+                break;
             }
         }
 
@@ -199,41 +237,88 @@ class WPfanyi_Import {
         }
 
         $zip = new ZipArchive;
-        $res = $zip->open($trans_zip_file);
+        $res = $zip->open($zip_filename);
         if (!$res) {
             $this->error_msg(__('Failed to parse the Zip package. The Zip package may be damaged', 'wpfanyi-import'));
         }
 
-        /**
-         * @var array Save the file name of the Mo and Po files read from the zip package
-         *
-         * @since 1.0.0
-         */
-        $trans_file_list = array();
+        $zip->extractTo($tmp_dir);
+        $zip->close();
 
-        /** Read valid Mo and Po files from the translation package to prevent code injection */
-        for ($i = 0; $i < $zip->numFiles; $i++) {
-            $filename = $zip->getNameIndex($i);
+        return $tmp_dir;
+    }
 
-            $pattern="#.*\.(mo|po)#i";
-            if (preg_match($pattern, $filename) && !stristr($filename, '/')) {
-                $trans_file_list[] = $filename;
+    /**
+     * Save the file to the WordPress translation directory
+     *
+     * @since 1.1.0
+     *
+     * @param array $files Files list
+     * @param string $trans_type Translation Type
+     *
+     * @return bool
+     */
+    private function save_to_trans_dir($files, $trans_type) {
+        $wp_trans_store_dir = WP_CONTENT_DIR . "/languages/{$trans_type}s/";
+
+        if (!is_writable($wp_trans_store_dir)) {
+            if (file_exists($wp_trans_store_dir)) {
+                /** dir exist but it is not writable */
+
+                /* translators: %s: Translation storage directory */
+                $this->error_msg(sprintf(__('The translation storage directory of this WordPress is not writable：%s', 'wpfanyi-import'), $wp_trans_store_dir));
+
+                return false;
+            } else {
+                /** translation store directory does not exist */
+
+                if (!mkdir($wp_trans_store_dir, 0775, true)) {
+                    $this->error_msg(__('WordPress translation storage directory does not exist and an error occurred when trying to create it. Please refer to PHP warning output for specific error information.', 'wpfanyi-import'));
+                }
+
+                return false;
             }
         }
 
-        if (empty($trans_file_list)) {
-            $this->error_msg(__('There are no valid Po and Mo files in the current translation package', 'wpfanyi-import'));
-
-            return false;
+        foreach ($files as $file) {
+            copy($file, $wp_trans_store_dir.basename($file));
         }
 
-        $zip->extractTo($wp_trans_storage_dir, $trans_file_list);
-        $zip->close();
-
-        /** Try to delete the temporary file after all operations */
-        @unlink($trans_zip_file);
-
         return true;
+    }
+
+    /**
+     * Prepare to translate files and filter out other irrelevant files
+     *
+     * @since 1.1.0
+     *
+     * @param array $files Files list
+     *
+     * @return false|array translate files list on success or false on failure.
+     */
+    private function prepare_trans_file($files) {
+        $trans_files = [];
+
+        foreach ($files as $k => $file) {
+            $pattern="#.*\.(mo|po)#i";
+            if (preg_match($pattern, $file)) {
+                if(!file_exists($file) && filesize($file) > 0) {
+                    continue;
+                }
+
+                $trans_files[] = $file;
+            }
+        }
+
+        $exist_mo = false;
+        foreach ($trans_files as $k => $file) {
+            $pattern="#.*\.mo#i";
+            if (preg_match($pattern, $file)) {
+                $exist_mo = true;
+            }
+        }
+
+        return $exist_mo ? $trans_files : false;
     }
 
     /**
