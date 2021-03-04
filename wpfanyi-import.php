@@ -6,7 +6,7 @@
  * Author URI:https://wenpai.org/
  * Text Domain: wpfanyi-import
  * Domain Path: /languages
- * Version: 1.0.0
+ * Version: 1.1.0
  * Network: True
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -26,7 +26,7 @@ defined('ABSPATH') || exit;
 
 add_action('init', function () {
     if (is_admin() && current_user_can('install_plugins')) {
-        define('WPF_VERSION', '1.0.0');
+        define('WPF_VERSION', '1.1.0');
         define('WPF_DIR_PATH', plugin_dir_path(__FILE__));
         define('WPF_DIR_URL', plugin_dir_url(__FILE__));
 
