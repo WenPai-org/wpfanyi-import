@@ -50,8 +50,43 @@ defined('ABSPATH') || exit;
                       <input type="radio" name="trans_type" value="theme"/>
                         <?php esc_html_e('Theme', 'wpfanyi-import'); ?></label>
                     <label>
-                      <input type="radio" name="trans_type" value="auto"/>
-                        <?php esc_html_e('Auto', 'wpfanyi-import'); ?></label>
+                      <input type="radio" name="trans_type" value="auto" class="radio-auto"/>
+                        <?php esc_html_e('Auto', 'wpfanyi-import'); ?>
+                      <div class="radio-auto-description">
+                        <p><?php esc_html_e('Only the translation package with directory structure can be recognized automatically, e.g:', 'wpfanyi-import'); ?></p>
+                        <ul class="tree">
+                          <li>
+                            <div class="treeNode">
+                              <i class="dashicons dashicons-before dashicons-portfolio"></i>
+                              <span class="title">Avada.zip</span>
+                            </div>
+                            <ul class="two-level">
+                              <li>
+                                <div class="treeNode ">
+                                  <i class="dashicons dashicons-before dashicons-portfolio"></i>
+                                  <span class="title">themes</span>
+                                </div>
+                                <ul class="three-level">
+                                  <li>
+                                    <div class="treeNode">
+                                      <i class="dashicons dashicons-before dashicons-translation"></i>
+                                      <span class="title">Avada-zh_CN.mo</span>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="treeNode">
+                                      <i class="dashicons dashicons-before dashicons-translation"></i>
+                                      <span class="title">Avada-zh_CN.po</span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </label>
+
                   </td>
                 </tr>
                 </tbody>
@@ -92,8 +127,43 @@ defined('ABSPATH') || exit;
                       <input type="radio" name="trans_type" value="theme"/>
                         <?php esc_html_e('Theme', 'wpfanyi-import'); ?></label>
                     <label>
-                      <input type="radio" name="trans_type" value="auto"/>
-                        <?php esc_html_e('Auto', 'wpfanyi-import'); ?></label>
+                      <input type="radio" name="trans_type" value="auto" class="radio-auto"/>
+                        <?php esc_html_e('Auto', 'wpfanyi-import'); ?>
+                      <div class="radio-auto-description">
+                        <p><?php esc_html_e('Only the translation package with directory structure can be recognized automatically, e.g:', 'wpfanyi-import'); ?></p>
+                        <ul class="tree">
+                          <li>
+                            <div class="treeNode">
+                              <i class="dashicons dashicons-before dashicons-portfolio"></i>
+                              <span class="title">Avada.zip</span>
+                            </div>
+                            <ul class="two-level">
+                              <li>
+                                <div class="treeNode ">
+                                  <i class="dashicons dashicons-before dashicons-portfolio"></i>
+                                  <span class="title">themes</span>
+                                </div>
+                                <ul class="three-level">
+                                  <li>
+                                    <div class="treeNode">
+                                      <i class="dashicons dashicons-before dashicons-translation"></i>
+                                      <span class="title">Avada-zh_CN.mo</span>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="treeNode">
+                                      <i class="dashicons dashicons-before dashicons-translation"></i>
+                                      <span class="title">Avada-zh_CN.po</span>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </label>
+
                   </td>
                 </tr>
                 </tbody>
@@ -107,7 +177,8 @@ defined('ABSPATH') || exit;
         </div>
       </div>
       <div class="wpfanyi-import-config-help stuffbox">
-        <button type="button" class="handlediv" aria-expanded="true"><span class="toggle-indicator" aria-hidden="true"></span></button>
+        <button type="button" class="handlediv" aria-expanded="true"><span class="toggle-indicator"
+                                                                           aria-hidden="true"></span></button>
         <h2 class="handle"><?php esc_html_e('Help', 'wpfanyi-import'); ?></h2>
         <div class="inside">
           <h2><?php esc_html_e('common problem:', 'wpfanyi-import'); ?></h2>
@@ -126,7 +197,7 @@ defined('ABSPATH') || exit;
             </li>
           </ol>
           <h2><?php esc_html_e('Need to translate a WordPress plugin/theme?', 'wpfanyi-import'); ?></h2>
-          <?php /* translators: %s: https://wpfanyi.com/new-project */ ?>
+            <?php /* translators: %s: https://wpfanyi.com/new-project */ ?>
           <p><?php printf(__('If he is hosted in wordpress.org we will handle its translation for free! Please send your needs to: <a href="%s" target="_blank">https://wpfanyi.com/new-project</a>.', 'wpfanyi-import'), 'https://wpfanyi.com/new-project'); ?></p>
         </div>
       </div>

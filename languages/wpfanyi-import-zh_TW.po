@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpfanyi-import\n"
-"POT-Creation-Date: 2021-03-04T08:21:12+00:00\n"
-"PO-Revision-Date: 2021-03-04 16:22+0800\n"
+"POT-Creation-Date: 2021-03-05T16:59:14+00:00\n"
+"PO-Revision-Date: 2021-03-06 01:00+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -36,10 +36,8 @@ msgstr "https://wenpai.org/"
 msgid "import translation"
 msgstr "匯入翻譯"
 
-#: core.php:54
-#, fuzzy
-#| msgid "Import"
-msgid "import"
+#: core.php:54 page.php:96 page.php:173
+msgid "Import"
 msgstr "匯入"
 
 #: core.php:81
@@ -150,65 +148,67 @@ msgstr "從URL匯入"
 msgid "Translation package:"
 msgstr "翻譯包："
 
-#: page.php:44 page.php:86
+#: page.php:44 page.php:121
 msgid "Package type:"
 msgstr "包型別："
 
-#: page.php:48 page.php:90
+#: page.php:48 page.php:125
 msgid "Plugin"
 msgstr "外掛"
 
-#: page.php:51 page.php:93
+#: page.php:51 page.php:128
 msgid "Theme"
 msgstr "主題"
 
-#: page.php:54 page.php:96
+#: page.php:54 page.php:131
 msgid "Auto"
 msgstr "自動識別"
 
-#: page.php:61 page.php:103
-msgid "Import"
-msgstr "匯入"
+#: page.php:56 page.php:133
+msgid ""
+"Only the translation package with directory structure can be recognized "
+"automatically, e.g:"
+msgstr "只有包含目錄結構的翻譯包才能被自動識別，例如："
 
-#: page.php:72
+#: page.php:107
 msgid "URL address:"
 msgstr "URL地址："
 
-#: page.php:111
+#: page.php:182
 msgid "Help"
 msgstr "幫助"
 
-#: page.php:113
+#: page.php:184
 msgid "common problem:"
 msgstr "常见问题："
 
-#: page.php:116
+#: page.php:187
 msgid "The installed translation package does not work"
 msgstr "安裝的翻譯包不起作用"
 
-#: page.php:117
+#: page.php:188
 msgid ""
 "A:Please check whether the translation package contains a valid .mo file."
 msgstr "第一步：請檢查該翻譯包中是否包含有效的 .mo 檔案。"
 
-#: page.php:118
+#: page.php:189
 msgid ""
 "B: Please check whether you have correctly selected the type of translation "
 "package (plugin or theme)."
 msgstr "第二步：請檢查你是否正確選擇了翻譯包型別（外掛或主題）。"
 
-#: page.php:119
+#: page.php:190
 msgid ""
 "C: Please upload by traditional manual method to finally confirm whether the "
 "translation package is valid."
 msgstr "第三步：請通過傳統的手工方式上傳語言包，以最終確認該語言包是否有效。"
 
-#: page.php:122
+#: page.php:193
 msgid "Found a bug in this plugin?"
 msgstr "發現了這個外掛的BUG？"
 
 #. translators: %s: https://github.com/WenPai-org/wpfanyi-import/issues
-#: page.php:124
+#: page.php:195
 msgid ""
 "Please submit issues here: <a href=\"%s\" target=\"_blank\">https://github."
 "com/WenPai-org/wpfanyi-import/issues</a>, we will fix it in the next "
@@ -218,12 +218,12 @@ msgstr ""
 "org/wpfanyi-import/issues</a>，我們將在下一個版本中對其進行修復，衷心感謝您的"
 "反饋！"
 
-#: page.php:128
+#: page.php:199
 msgid "Need to translate a WordPress plugin/theme?"
 msgstr "需要翻譯一個WordPress外掛/主題？"
 
 #. translators: %s: https://wpfanyi.com/new-project
-#: page.php:130
+#: page.php:201
 msgid ""
 "If he is hosted in wordpress.org we will handle its translation for free! "
 "Please send your needs to: <a href=\"%s\" target=\"_blank\">https://wpfanyi."
@@ -231,6 +231,11 @@ msgid ""
 msgstr ""
 "如果它託管在WordPress.org中，我們將免費處理它的翻譯！請將您的需求傳送至：<a "
 "href=\"%s\" target=\"_blank\">https://wpfanyi.com/new-project</a>。"
+
+#, fuzzy
+#~| msgid "Import"
+#~ msgid "import"
+#~ msgstr "匯入"
 
 #~ msgid ""
 #~ "There are no valid Po and Mo files in the current translation package"

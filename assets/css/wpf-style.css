@@ -1,4 +1,9 @@
-﻿/*Tab*/
+.main{
+      max-width: 800px;
+}
+.form-table td{
+        line-height: 1.8;
+}
 .wpfanyi-tab-title {
   position: relative;
   left: 0;
@@ -42,7 +47,7 @@
   display: none;
 }
 .wpfanyi-show {
-  display: block !important;
+  display: block;
 }
 
 #trans_url {
@@ -89,6 +94,27 @@
   padding: 12px 30px 12px;
   display: none;
 }
-.wpfanyi-import-config-help {
-  max-width: 800px;
+.radio-auto-description{
+    display: none;
 }
+.wpfanyi-tab-item input[type=radio]:checked+div{
+    display: block;
+    transition: 1s all;
+}
+
+.tree{background: #fff;
+    padding: 15px 35px 15px 15px;
+    display: inline-block;
+    box-shadow: 0px 0px 6px 0px #00000005;
+  }
+.treeNode {
+      cursor: pointer;
+          line-height: 20px;
+    }
+.treeNode .dashicons{
+        
+}
+.two-level,.three-level{
+      padding-left: 2em;
+  }  
+  
