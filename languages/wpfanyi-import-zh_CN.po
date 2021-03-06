@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WPfanyi import 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpfanyi-import\n"
-"POT-Creation-Date: 2021-03-05T16:59:14+00:00\n"
-"PO-Revision-Date: 2021-03-06 01:00+0800\n"
+"POT-Creation-Date: 2021-03-06T04:55:04+00:00\n"
+"PO-Revision-Date: 2021-03-06 12:55+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -70,30 +70,30 @@ msgstr "错误的URL格式"
 msgid "Parameter error: unknown translation package import method"
 msgstr "参数错误：翻译包导入方法未知"
 
-#: core.php:167
+#: core.php:165
 msgid ""
 "Translation package upload failed, please check whether the file system "
 "permissions are normal"
 msgstr "翻译包上传失败，请检查文件系统权限是否正常"
 
-#: core.php:169
+#: core.php:167
 msgid ""
 "Translation package acquisition failed, please check whether the URL is valid"
 msgstr "获取翻译包失败，请检查URL是否有效"
 
-#: core.php:232
+#: core.php:236
 msgid "No translation package was successfully identified."
 msgstr "未成功识别任何翻译包。"
 
-#: core.php:252
+#: core.php:254
 msgid "The PHP temporary directory was not recognized"
 msgstr "无法识别PHP临时目录"
 
-#: core.php:262
+#: core.php:264
 msgid "PHP temporary directory is not writable."
 msgstr "PHP临时目录不可写。"
 
-#: core.php:273
+#: core.php:275
 msgid ""
 "This server doesn‘t support the decompression of Zip archives. Please "
 "contact the service provider of this server to enable the zip extension "
@@ -101,12 +101,12 @@ msgid ""
 msgstr ""
 "此服务器不支持解压ZIP包。 请与服务器提供商联系以启用PHP的zip扩展模块功能。"
 
-#: core.php:281
+#: core.php:283
 msgid "Failed to parse the Zip package. The Zip package may be damaged"
 msgstr "无法解析ZIP包，该包可能已损坏"
 
 #. translators: %s: Translation storage directory
-#: core.php:308
+#: core.php:310
 msgid "The translation storage directory of this WordPress is not writable：%s"
 msgstr "该WordPress的翻译存储目录不可写：%s"
 
@@ -117,6 +117,10 @@ msgid ""
 "error information."
 msgstr ""
 "WordPress翻译存储目录不存在，尝试创建时出错。具体错误信息请参考PHP警告输出。"
+
+#: core.php:359
+msgid "No valid translation was found."
+msgstr "未发现任何有效的翻译文件。"
 
 #: page.php:11
 msgid "Import translation"

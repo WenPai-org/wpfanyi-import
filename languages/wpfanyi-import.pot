@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-03-05T16:59:14+00:00\n"
+"POT-Creation-Date: 2021-03-06T04:55:04+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: wpfanyi-import\n"
@@ -69,41 +69,45 @@ msgstr ""
 msgid "Parameter error: unknown translation package import method"
 msgstr ""
 
-#: core.php:167
+#: core.php:165
 msgid "Translation package upload failed, please check whether the file system permissions are normal"
 msgstr ""
 
-#: core.php:169
+#: core.php:167
 msgid "Translation package acquisition failed, please check whether the URL is valid"
 msgstr ""
 
-#: core.php:232
+#: core.php:236
 msgid "No translation package was successfully identified."
 msgstr ""
 
-#: core.php:252
+#: core.php:254
 msgid "The PHP temporary directory was not recognized"
 msgstr ""
 
-#: core.php:262
+#: core.php:264
 msgid "PHP temporary directory is not writable."
 msgstr ""
 
-#: core.php:273
+#: core.php:275
 msgid "This server doesn‘t support the decompression of Zip archives. Please contact the service provider of this server to enable the zip extension module function of PHP."
 msgstr ""
 
-#: core.php:281
+#: core.php:283
 msgid "Failed to parse the Zip package. The Zip package may be damaged"
 msgstr ""
 
 #. translators: %s: Translation storage directory
-#: core.php:308
+#: core.php:310
 msgid "The translation storage directory of this WordPress is not writable：%s"
 msgstr ""
 
 #: core.php:315
 msgid "WordPress translation storage directory does not exist and an error occurred when trying to create it. Please refer to PHP warning output for specific error information."
+msgstr ""
+
+#: core.php:359
+msgid "No valid translation was found."
 msgstr ""
 
 #: page.php:11

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpfanyi-import\n"
-"POT-Creation-Date: 2021-03-05T16:59:14+00:00\n"
-"PO-Revision-Date: 2021-03-06 01:00+0800\n"
+"POT-Creation-Date: 2021-03-06T04:55:04+00:00\n"
+"PO-Revision-Date: 2021-03-06 12:56+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -68,30 +68,30 @@ msgstr "錯誤的URL格式"
 msgid "Parameter error: unknown translation package import method"
 msgstr "引數錯誤：翻譯包匯入方法未知"
 
-#: core.php:167
+#: core.php:165
 msgid ""
 "Translation package upload failed, please check whether the file system "
 "permissions are normal"
 msgstr "翻譯包上傳失敗，請檢查檔案系統許可權是否正常"
 
-#: core.php:169
+#: core.php:167
 msgid ""
 "Translation package acquisition failed, please check whether the URL is valid"
 msgstr "獲取翻譯包失敗，請檢查URL是否有效"
 
-#: core.php:232
+#: core.php:236
 msgid "No translation package was successfully identified."
 msgstr "未成功識別任何翻譯包。"
 
-#: core.php:252
+#: core.php:254
 msgid "The PHP temporary directory was not recognized"
 msgstr "無法識別PHP臨時目錄"
 
-#: core.php:262
+#: core.php:264
 msgid "PHP temporary directory is not writable."
 msgstr "PHP臨時目錄不可寫。"
 
-#: core.php:273
+#: core.php:275
 msgid ""
 "This server doesn‘t support the decompression of Zip archives. Please "
 "contact the service provider of this server to enable the zip extension "
@@ -100,12 +100,12 @@ msgstr ""
 "此伺服器不支援解壓ZIP包。 請與伺服器提供商聯絡以啟用PHP的zip擴充套件模組功"
 "能。"
 
-#: core.php:281
+#: core.php:283
 msgid "Failed to parse the Zip package. The Zip package may be damaged"
 msgstr "無法解析ZIP包，該包可能已損壞"
 
 #. translators: %s: Translation storage directory
-#: core.php:308
+#: core.php:310
 msgid "The translation storage directory of this WordPress is not writable：%s"
 msgstr "該WordPress的翻譯儲存目錄不可寫：%s"
 
@@ -116,6 +116,10 @@ msgid ""
 "error information."
 msgstr ""
 "WordPress翻譯儲存目錄不存在，嘗試建立時出錯。具體錯誤資訊請參考PHP警告輸出。"
+
+#: core.php:359
+msgid "No valid translation was found."
+msgstr "未發現任何有效的翻譯檔案。"
 
 #: page.php:11
 msgid "Import translation"
