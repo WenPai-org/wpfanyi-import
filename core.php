@@ -156,8 +156,6 @@ class WPfanyi_Import {
      *
      * @since 1.0.0
      *
-     * @todo It might be better to introduce exceptions to return errors
-     *
      * @return bool true on success or false on failure.
      */
     private function import_trans() {
@@ -180,7 +178,9 @@ class WPfanyi_Import {
         $trans_types = [];
         if ('auto' === $this->trans_type) {
             $trans_types = $this->get_trans_type($trans_tmp_dir);
-            if (!$trans_types) {
+            if (is_wp_error($trans_types)) {
+                $this->error_msg($trans_types->get_error_message());
+
                 return false;
             }
         } else {
@@ -194,12 +194,16 @@ class WPfanyi_Import {
             }
 
             $trans_files = $this->prepare_trans_file($trans_files);
-            if ( ! $trans_files) {
+            if (is_wp_error($trans_files)) {
+                $this->error_msg($trans_files->get_error_message());
+
                 return false;
             }
 
             $res = $this->save_to_trans_dir($trans_files, $trans_type);
-            if ( ! $res) {
+            if (is_wp_error($res)) {
+                $this->error_msg($res->get_error_message());
+
                 return false;
             }
         }
@@ -215,7 +219,7 @@ class WPfanyi_Import {
      *
      * @param string $dir Directory to check
      *
-     * @return false|array The translation types contained in the directory and their corresponding directories, such as ['plugin '= >'plugins']
+     * @return WP_Error|array The translation types contained in the directory and their corresponding directories, such as ['plugin '= >'plugins']
      */
     private function get_trans_type($dir) {
         $data = [];
@@ -229,9 +233,7 @@ class WPfanyi_Import {
         }
 
         if (empty($data)) {
-            $this->error_msg(__('No translation package was successfully identified.', 'wpfanyi-import'));
-
-            return false;
+            return new WP_Error('wpf_type_identification_failed', __('No translation package was successfully identified.', 'wpfanyi-import'));
         }
 
         return $data;
@@ -295,7 +297,7 @@ class WPfanyi_Import {
      * @param array $files Files list
      * @param string $trans_type Translation Type
      *
-     * @return bool
+     * @return WP_Error|bool
      */
     private function save_to_trans_dir($files, $trans_type) {
         $wp_trans_store_dir = WP_CONTENT_DIR . "/languages/{$trans_type}s/";
@@ -305,17 +307,13 @@ class WPfanyi_Import {
                 /** dir exist but it is not writable */
 
                 /* translators: %s: Translation storage directory */
-                $this->error_msg(sprintf(__('The translation storage directory of this WordPress is not writable：%s', 'wpfanyi-import'), $wp_trans_store_dir));
-
-                return false;
+                return new WP_Error('wpf_file_permission_error', sprintf(__('The translation storage directory of this WordPress is not writable：%s', 'wpfanyi-import'), $wp_trans_store_dir));
             } else {
                 /** translation store directory does not exist */
 
                 if (!mkdir($wp_trans_store_dir, 0775, true)) {
-                    $this->error_msg(__('WordPress translation storage directory does not exist and an error occurred when trying to create it. Please refer to PHP warning output for specific error information.', 'wpfanyi-import'));
+                    return new WP_Error('wpf_file_permission_error', __('WordPress translation storage directory does not exist and an error occurred when trying to create it. Please refer to PHP warning output for specific error information.', 'wpfanyi-import'));
                 }
-
-                return false;
             }
         }
 
@@ -333,7 +331,7 @@ class WPfanyi_Import {
      *
      * @param array $files Files list
      *
-     * @return false|array translate files list on success or false on failure.
+     * @return WP_Error|array translate files list on success.
      */
     private function prepare_trans_file($files) {
         $trans_files = [];
@@ -357,7 +355,11 @@ class WPfanyi_Import {
             }
         }
 
-        return $exist_mo ? $trans_files : false;
+        if (!$exist_mo) {
+            return new WP_Error('wpf_trans_not_found', __('No valid translation was found.', 'wpfanyi-import'));
+        }
+
+        return $trans_files;
     }
 
     /**
