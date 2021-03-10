@@ -14,7 +14,7 @@ defined('ABSPATH') || exit;
   <div>
     <div class="notice notice-info">
       <p>
-          <?php esc_html_e('The translation package is a Zip package including MO and PO files. Select the translation pack on this page and set its type correctly then click Import to add it to WordPress.', 'wpfanyi-import'); ?>
+          <?php esc_html_e('The translation package is a Zip package including .mo and .po files. Select the translation pack on this page and set its type correctly then click Import to add it to WordPress.', 'wpfanyi-import'); ?>
         <br/>
         <b>
             <?php esc_html_e('Note: If a translation package with the same name already exists, this operation will overwrite it', 'wpfanyi-import'); ?>
@@ -57,17 +57,17 @@ defined('ABSPATH') || exit;
                         <ul class="tree">
                           <li>
                             <div class="treeNode"><i class="dashicons dashicons-before dashicons-media-archive"></i>
-                              <span class="title">storefront-footer-bar.zip</span></div>
+                              <span class="title">bbpress-zh_CN.zip</span></div>
                             <ul class="two-level">
                               <li>
-                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-translation"></i>
-                                  <span class="title">storefront-footer-bar-zh_CN.mo</span></div>
+                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-media-default"></i>
+                                  <span class="title">bbpress-zh_CN.mo</span></div>
                               </li>
                             </ul>
                             <ul class="two-level">
                               <li>
-                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-translation"></i>
-                                  <span class="title">storefront-footer-bar-zh_CN.po</span></div>
+                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-media-default"></i>
+                                  <span class="title">bbpress-zh_CN.po</span></div>
                               </li>
                             </ul>
                           </li>
@@ -78,17 +78,17 @@ defined('ABSPATH') || exit;
                         <ul class="tree">
                           <li>
                             <div class="treeNode"><i class="dashicons dashicons-before dashicons-media-archive"></i>
-                              <span class="title">storefront-zh_CN.zip</span></div>
+                              <span class="title">twentytwentyone-zh_CN.zip</span></div>
                             <ul class="two-level">
                               <li>
-                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-translation"></i>
-                                  <span class="title">storefront-zh_CN.mo</span></div>
+                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-media-default"></i>
+                                  <span class="title">twentytwentyone-zh_CN.mo</span></div>
                               </li>
                             </ul>
                             <ul class="two-level">
                               <li>
-                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-translation"></i>
-                                  <span class="title">storefront-zh_CN.po</span></div>
+                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-media-default"></i>
+                                  <span class="title">twentytwentyone-zh_CN.po</span></div>
                               </li>
                             </ul>
                           </li>
@@ -99,39 +99,39 @@ defined('ABSPATH') || exit;
                         <ul class="tree">
                           <li>
                             <div class="treeNode"><i class="dashicons dashicons-before dashicons-media-archive"></i>
-                              <span class="title">storefront-zh_CN.zip</span></div>
+                              <span class="title">translation-zh_CN.zip</span></div>
                             <ul class="two-level">
                               <li>
-                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-portfolio"></i>
+                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-open-folder"></i>
                                   <span class="title">themes</span></div>
                                 <ul class="three-level">
                                   <li>
                                     <div class="treeNode"><i
-                                              class="dashicons dashicons-before dashicons-translation"></i> <span
-                                              class="title">storefront-zh_CN.mo</span></div>
+                                              class="dashicons dashicons-before dashicons-media-default"></i> <span
+                                              class="title">twentytwentyone-zh_CN.mo</span></div>
                                   </li>
                                   <li>
                                     <div class="treeNode"><i
-                                              class="dashicons dashicons-before dashicons-translation"></i> <span
-                                              class="title">storefront-zh_CN.po</span></div>
+                                              class="dashicons dashicons-before dashicons-media-default"></i> <span
+                                              class="title">twentytwentyone-zh_CN.po</span></div>
                                   </li>
                                 </ul>
                               </li>
                             </ul>
                             <ul class="two-level">
                               <li>
-                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-portfolio"></i>
+                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-open-folder"></i>
                                   <span class="title">plugins</span></div>
                                 <ul class="three-level">
                                   <li>
                                     <div class="treeNode"><i
-                                              class="dashicons dashicons-before dashicons-translation"></i> <span
-                                              class="title">storefront-footer-bar-zh_CN.po</span></div>
+                                              class="dashicons dashicons-before dashicons-media-default"></i> <span
+                                              class="title">bbpress-zh_CN.mo</span></div>
                                   </li>
                                   <li>
                                     <div class="treeNode"><i
-                                              class="dashicons dashicons-before dashicons-translation"></i> <span
-                                              class="title">storefront-footer-bar-zh_CN.mo</span></div>
+                                              class="dashicons dashicons-before dashicons-media-default"></i> <span
+                                              class="title">bbpress-zh_CN.po</span></div>
                                   </li>
                                 </ul>
                               </li>
@@ -182,17 +182,17 @@ defined('ABSPATH') || exit;
                         <ul class="tree">
                           <li>
                             <div class="treeNode"><i class="dashicons dashicons-before dashicons-media-archive"></i>
-                              <span class="title">storefront-footer-bar.zip</span></div>
+                              <span class="title">bbpress-zh_CN.zip</span></div>
                             <ul class="two-level">
                               <li>
-                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-translation"></i>
-                                  <span class="title">storefront-footer-bar-zh_CN.mo</span></div>
+                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-media-default"></i>
+                                  <span class="title">bbpress-zh_CN.mo</span></div>
                               </li>
                             </ul>
                             <ul class="two-level">
                               <li>
-                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-translation"></i>
-                                  <span class="title">storefront-footer-bar-zh_CN.po</span></div>
+                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-media-default"></i>
+                                  <span class="title">bbpress-zh_CN.po</span></div>
                               </li>
                             </ul>
                           </li>
@@ -203,17 +203,17 @@ defined('ABSPATH') || exit;
                         <ul class="tree">
                           <li>
                             <div class="treeNode"><i class="dashicons dashicons-before dashicons-media-archive"></i>
-                              <span class="title">storefront-zh_CN.zip</span></div>
+                              <span class="title">twentytwentyone-zh_CN.zip</span></div>
                             <ul class="two-level">
                               <li>
-                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-translation"></i>
-                                  <span class="title">storefront-zh_CN.mo</span></div>
+                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-media-default"></i>
+                                  <span class="title">twentytwentyone-zh_CN.mo</span></div>
                               </li>
                             </ul>
                             <ul class="two-level">
                               <li>
-                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-translation"></i>
-                                  <span class="title">storefront-zh_CN.po</span></div>
+                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-media-default"></i>
+                                  <span class="title">twentytwentyone-zh_CN.po</span></div>
                               </li>
                             </ul>
                           </li>
@@ -224,39 +224,39 @@ defined('ABSPATH') || exit;
                         <ul class="tree">
                           <li>
                             <div class="treeNode"><i class="dashicons dashicons-before dashicons-media-archive"></i>
-                              <span class="title">storefront-zh_CN.zip</span></div>
+                              <span class="title">translation-zh_CN.zip</span></div>
                             <ul class="two-level">
                               <li>
-                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-portfolio"></i>
+                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-open-folder"></i>
                                   <span class="title">themes</span></div>
                                 <ul class="three-level">
                                   <li>
                                     <div class="treeNode"><i
-                                              class="dashicons dashicons-before dashicons-translation"></i> <span
-                                              class="title">storefront-zh_CN.mo</span></div>
+                                              class="dashicons dashicons-before dashicons-media-default"></i> <span
+                                              class="title">twentytwentyone-zh_CN.mo</span></div>
                                   </li>
                                   <li>
                                     <div class="treeNode"><i
-                                              class="dashicons dashicons-before dashicons-translation"></i> <span
-                                              class="title">storefront-zh_CN.po</span></div>
+                                              class="dashicons dashicons-before dashicons-media-default"></i> <span
+                                              class="title">twentytwentyone-zh_CN.po</span></div>
                                   </li>
                                 </ul>
                               </li>
                             </ul>
                             <ul class="two-level">
                               <li>
-                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-portfolio"></i>
+                                <div class="treeNode "><i class="dashicons dashicons-before dashicons-open-folder"></i>
                                   <span class="title">plugins</span></div>
                                 <ul class="three-level">
                                   <li>
                                     <div class="treeNode"><i
-                                              class="dashicons dashicons-before dashicons-translation"></i> <span
-                                              class="title">storefront-footer-bar-zh_CN.po</span></div>
+                                              class="dashicons dashicons-before dashicons-media-default"></i> <span
+                                              class="title">bbpress-zh_CN.mo</span></div>
                                   </li>
                                   <li>
                                     <div class="treeNode"><i
-                                              class="dashicons dashicons-before dashicons-translation"></i> <span
-                                              class="title">storefront-footer-bar-zh_CN.mo</span></div>
+                                              class="dashicons dashicons-before dashicons-media-default"></i> <span
+                                              class="title">bbpress-zh_CN.po</span></div>
                                   </li>
                                 </ul>
                               </li>
