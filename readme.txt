@@ -1,5 +1,5 @@
 === WPfanyi import ===
-Tags: translate,translate import,import
+Tags: translate, translate import, import
 Requires at least: 5.4
 Tested up to: 5.7
 Requires PHP: 5.6
@@ -12,36 +12,86 @@ Install translation package like a theme/plugin, no need for FTP/SFTP. this tool
 == Description ==
 ### This plugin provides an innovative translation package installation method. ###
 
-**1. Old Method**
+How to use the translation language pack:
 
-You need to download the translation package to the local first, unzip the package, and upload it to the correct path via FTP.
+**1.Traditional manual installation**
 
-Imagine the process of selecting a lengthy path on FTP with the mouse. This is troublesome, right?
+Time consuming and laborious old method, FTP upload installation please refer to  [https://wpfanyi.com/new-project](https://wpfanyi.com/new-project)
 
-**2.New Method**
+**2.installation of WPfanyi plugin**
 
-Now you only need to paste the download address of the translation package in the text input, and correctly select the type of translation package (plugin or theme), after clicking “Import”, the tool will help you complete all operations.
+A new way to save time and effort, you can install and update the language pack in the following two ways:
 
-If you have a local translation package, you can also easily import it through this tool.
+1. Upload and install
 
-### Need to translate a WordPress plugin/theme? ###
+You can directly upload the downloaded xxx_zh_cn.zip language package file, select the corresponding language type [Plugin] or [Theme] and click Import.
 
-If he is hosted in wordpress.org we will handle its translation for free! Please send your needs to: [https://wpfanyi.com/new-project](https://wpfanyi.com/new-project).
+2. Online installation
+
+Go to wpfanyi.com to get the download address of the language pack, fill in the online installation address, select "Plugin" or "Theme" and click "Import" to complete.
+
+###Request for Chinese translation###
+
+1. User's request for Chinese translation
+
+If you are a WordPress user and would like someone to translate your favorite products into Chinese, please submit your information at https://wpfanyi.com/new-project and we will handle it for free.
+
+2. The author's request for Chinese translation
+
+If you are a WordPress developer who would like to translate your product into Chinese and are looking for a Chinese contributor, please email us at wpfanyi@feibisi.com and our Chinese translation team will handle it for free. (Free WordPress.org product only. For long term contributors, please add PET translation rights for @wpfanyi.)
 
 == Frequently Asked Questions ==
-### The installed translation package does not work ###
 
-A:Please check whether the translation package contains a valid .mo file.
+###The installed translation package does not work###
+
+A: Please check whether the translation package contains a valid .mo file.
 
 B: Please check whether you have correctly selected the type of translation package (plugin or theme).
 
 C: Please upload by traditional manual method to finally confirm whether the translation package is valid.
 
+### Could you provide Chinese translation support? ###
+
+Well, wpfanyi.com is the first Chinese WordPress translation platform in China, and our team of contributors are willing to provide you with free, pure and high-quality Chinese translation services.
+
+Are there any other business partnerships or Chinese market needs? Please also contact through the above email or the public way on the website.
+
 ### Found a bug in this plugin? ###
 
 Please submit issues here: [https://github.com/WenPai-org/wpfanyi-import/issues](https://github.com/WenPai-org/wpfanyi-import/issues), we will fix it in the next version, thank you for your feedback!
 
+== Installation ==
+
+Starting with WPfanyi import consists of just two steps: installing and setting up the plugin. WPfanyi import is designed to work with your site’s specific needs, so don’t forget to go through the WPfanyi import configuration wizard as explained in the ‘after activation’ step!
+
+###Install WPfanyi import form within WordPress###
+
+1. Visit the plugins page within your dashboard and select ‘Add New’;
+2. Search for ‘WPfanyi import’;
+3. Activate WPfanyi import from your Plugins page;
+4. Go to ‘after activation’ below.
+
+###Install WPfanyi import manual###
+
+1. Upload the ‘wpfanyi-import’ folder to the /wp-content/plugins/ directory;
+2. Activate the WPfanyi import plugin through the ‘Plugins’ menu in WordPress;
+3. Go to ‘after activation’ below.
+
+###After Activate###
+
+1. Setting Menu: Go to ‘Tools’ => ‘Import Translation’;
+2. MultiSite Menu: After the network is enabled,Go to ‘Dashboard’ => ‘Import Translation’;
+3. You’re done!
+
 == Changelog ==
+
+### 1.1.0 ###
+
+* Add automatic recognition function
+* Add option prompt
+* Modify the help description
+* Updated language files
+
 ### 1.0.0 ###
 
 * Support local upload to import translation package
