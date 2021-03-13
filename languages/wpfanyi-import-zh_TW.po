@@ -1,42 +1,31 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpfanyi-import\n"
-"POT-Creation-Date: 2021-03-06T04:55:04+00:00\n"
-"PO-Revision-Date: 2021-03-06 12:56+0800\n"
-"Last-Translator: \n"
-"Language-Team: \n"
+"Project-Id-Version: WPfanyi import\n"
+"POT-Creation-Date: 2021-03-13 14:46+0800\n"
+"PO-Revision-Date: 2021-03-13 14:48+0800\n"
+"Last-Translator: 薇晓朵 <support@weixiaoduo.com>\n"
+"Language-Team: 薇晓朵 <support@weixiaoduo.com>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
-"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#. Plugin Name of the plugin
-msgid "WPfanyi import"
-msgstr "文派翻譯匯入器"
-
-#. Description of the plugin
-msgid ""
-"Install translation package like a theme/plugin, no need for FTP. this tool "
-"will save you a lot of time."
-msgstr "像安裝外掛、主題那樣安裝翻譯包，無需FTP。這個工具將為您節省大量時間。"
-
-#. Author of the plugin
-msgid "WenPai.org"
-msgstr "文派"
-
-#. Author URI of the plugin
-msgid "https://wenpai.org/"
-msgstr "https://wenpai.org/"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: wpfanyi-import.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
 
 #: core.php:44 core.php:45
 msgid "import translation"
 msgstr "匯入翻譯"
 
-#: core.php:54 page.php:96 page.php:173
+#: core.php:54 page.php:149 page.php:274
 msgid "Import"
 msgstr "匯入"
 
@@ -106,6 +95,7 @@ msgstr "無法解析ZIP包，該包可能已損壞"
 
 #. translators: %s: Translation storage directory
 #: core.php:310
+#, php-format
 msgid "The translation storage directory of this WordPress is not writable：%s"
 msgstr "該WordPress的翻譯儲存目錄不可寫：%s"
 
@@ -121,98 +111,107 @@ msgstr ""
 msgid "No valid translation was found."
 msgstr "未發現任何有效的翻譯檔案。"
 
-#: page.php:11
+#: page.php:12
 msgid "Import translation"
 msgstr "匯入翻譯"
 
-#: page.php:15
+#: page.php:17
 msgid ""
-"The translation package is a Zip package including MO and PO files. Select "
+"The translation package is a Zip package including .mo and .po files. Select "
 "the translation pack on this page and set its type correctly then click "
 "Import to add it to WordPress."
 msgstr ""
-"翻譯包是一個包含MO和PO檔案的Zip包。在此頁面上選擇翻譯包並正確設定其型別，然後"
-"單擊“匯入”以將其新增到WordPress。"
+"翻譯包是一個包含 .mo 和 .po 檔案的zip 包。在此頁面上選擇翻譯包並正確設定其型"
+"別，然後單擊“匯入”以將其新增到WordPress。"
 
-#: page.php:17
+#: page.php:20
 msgid ""
 "Note: If a translation package with the same name already exists, this "
 "operation will overwrite it"
 msgstr "注意：若已存在同名翻譯包，則此操作將覆蓋它"
 
-#: page.php:24
+#: page.php:27
 msgid "Import from Local"
 msgstr "從本地匯入"
 
-#: page.php:25
+#: page.php:30
 msgid "Import from URL"
 msgstr "從URL匯入"
 
-#: page.php:36
+#: page.php:41
 msgid "Translation package:"
 msgstr "翻譯包："
 
-#: page.php:44 page.php:121
+#: page.php:47 page.php:172
 msgid "Package type:"
 msgstr "包型別："
 
-#: page.php:48 page.php:125
+#: page.php:49 page.php:174
 msgid "Plugin"
 msgstr "外掛"
 
-#: page.php:51 page.php:128
+#: page.php:51 page.php:176
 msgid "Theme"
-msgstr "主題"
+msgstr "佈景主題"
 
-#: page.php:54 page.php:131
+#: page.php:53 page.php:178
 msgid "Auto"
 msgstr "自動識別"
 
-#: page.php:56 page.php:133
-msgid ""
-"Only the translation package with directory structure can be recognized "
-"automatically, e.g:"
-msgstr "只有包含目錄結構的翻譯包才能被自動識別，例如："
+#: page.php:56
+msgid "The standard format of plugin language pack is as follows:"
+msgstr "外掛語言包的標準格式如下："
 
-#: page.php:107
+#: page.php:77 page.php:181 page.php:202
+msgid "The standard format of theme language pack is as follows:"
+msgstr "佈景主題語言包的標準格式如下："
+
+#: page.php:98 page.php:223
+msgid ""
+"The standard formats of language packages that can auto identify types are "
+"as follows:"
+msgstr "可自動識別類型的語言包的標準格式如下："
+
+#: page.php:160
 msgid "URL address:"
 msgstr "URL地址："
 
-#: page.php:182
+#: page.php:284
 msgid "Help"
 msgstr "幫助"
 
-#: page.php:184
+#: page.php:288
 msgid "common problem:"
 msgstr "常见问题："
 
-#: page.php:187
+#: page.php:292
 msgid "The installed translation package does not work"
 msgstr "安裝的翻譯包不起作用"
 
-#: page.php:188
+#: page.php:295
 msgid ""
 "A:Please check whether the translation package contains a valid .mo file."
 msgstr "第一步：請檢查該翻譯包中是否包含有效的 .mo 檔案。"
 
-#: page.php:189
+#: page.php:298
 msgid ""
 "B: Please check whether you have correctly selected the type of translation "
 "package (plugin or theme)."
-msgstr "第二步：請檢查你是否正確選擇了翻譯包型別（外掛或主題）。"
+msgstr "第二步：請檢查你是否正確選擇了翻譯包型別（外掛或佈景主題）。"
 
-#: page.php:190
+#: page.php:301
 msgid ""
 "C: Please upload by traditional manual method to finally confirm whether the "
 "translation package is valid."
 msgstr "第三步：請通過傳統的手工方式上傳語言包，以最終確認該語言包是否有效。"
 
-#: page.php:193
+#: page.php:305
 msgid "Found a bug in this plugin?"
 msgstr "發現了這個外掛的BUG？"
 
 #. translators: %s: https://github.com/WenPai-org/wpfanyi-import/issues
-#: page.php:195
+#: page.php:308
+#, php-format
 msgid ""
 "Please submit issues here: <a href=\"%s\" target=\"_blank\">https://github."
 "com/WenPai-org/wpfanyi-import/issues</a>, we will fix it in the next "
@@ -222,12 +221,13 @@ msgstr ""
 "org/wpfanyi-import/issues</a>，我們將在下一個版本中對其進行修復，衷心感謝您的"
 "反饋！"
 
-#: page.php:199
+#: page.php:312
 msgid "Need to translate a WordPress plugin/theme?"
-msgstr "需要翻譯一個WordPress外掛/主題？"
+msgstr "需要翻譯一個WordPress外掛/佈景主題？"
 
 #. translators: %s: https://wpfanyi.com/new-project
-#: page.php:201
+#: page.php:315
+#, php-format
 msgid ""
 "If he is hosted in wordpress.org we will handle its translation for free! "
 "Please send your needs to: <a href=\"%s\" target=\"_blank\">https://wpfanyi."
@@ -235,6 +235,30 @@ msgid ""
 msgstr ""
 "如果它託管在WordPress.org中，我們將免費處理它的翻譯！請將您的需求傳送至：<a "
 "href=\"%s\" target=\"_blank\">https://wpfanyi.com/new-project</a>。"
+
+#. Plugin Name of the plugin/theme
+msgid "WPfanyi import"
+msgstr "文派翻譯匯入器"
+
+#. Description of the plugin/theme
+msgid ""
+"Install translation package like a theme/plugin, no need for FTP/SFTP. this "
+"tool will save you a lot of time."
+msgstr ""
+"像安裝外掛、佈景主題那樣安裝翻譯包，無需FTP。這個工具將為您節省大量時間。"
+
+#. Author of the plugin/theme
+msgid "WenPai.org"
+msgstr "文派"
+
+#. Author URI of the plugin/theme
+msgid "https://wenpai.org/"
+msgstr "https://wenpai.org/"
+
+#~ msgid ""
+#~ "Only the translation package with directory structure can be recognized "
+#~ "automatically, e.g:"
+#~ msgstr "只有包含目錄結構的翻譯包才能被自動識別，例如："
 
 #, fuzzy
 #~| msgid "Import"
