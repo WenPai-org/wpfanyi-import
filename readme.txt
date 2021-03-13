@@ -83,6 +83,11 @@ Starting with WPfanyi import consists of just two steps: installing and setting 
 2. MultiSite Menu: After the network is enabled,Go to ‘Dashboard’ => ‘Import Translation’;
 3. You’re done!
 
+== Screenshots ==
+1. Install plugin translation package
+2. Install theme translation package
+3. Remote URL installation translation package and automatic identification types
+
 == Changelog ==
 
 ### 1.1.0 ###
