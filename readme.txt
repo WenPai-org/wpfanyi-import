@@ -3,7 +3,7 @@ Tags: translate, translate import, import
 Requires at least: 5.4
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -84,6 +84,7 @@ Starting with WPfanyi import consists of just two steps: installing and setting 
 3. You’re done!
 
 == Screenshots ==
+
 1. Install plugin translation package
 2. Install theme translation package
 3. Remote URL installation translation package and automatic identification types
