@@ -189,7 +189,7 @@ class WPfanyi_Import {
 
         foreach ($trans_types as $trans_type => $trans_dir) {
             $trans_files = [];
-            foreach (scandir($trans_tmp_dir) as $filename) {
+            foreach (scandir("{$trans_tmp_dir}{$trans_dir}") as $filename) {
                 $trans_files[] = "{$trans_tmp_dir}{$trans_dir}/{$filename}";
             }
 
