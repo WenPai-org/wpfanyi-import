@@ -164,7 +164,7 @@ defined('ABSPATH') || exit;
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> ×</button>
                       </div>
                       <input name="trans_url" type="url" id="trans_url" value="" class="trans_url"
-                             placeholder="https://wpfanyi.com/glotpress/bulk-export/wordfence/">
+                             placeholder="https://wpfanyi.com/glotpress/bulk-export/bbpress/">
                     </div>
                   </td>
                 </tr>
