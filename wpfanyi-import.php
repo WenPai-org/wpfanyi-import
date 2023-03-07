@@ -32,13 +32,10 @@ add_action('init', function () {
         define('WPF_BASE_NAME', plugin_basename(__FILE__));
 
         /** Load translation */
-        $current_locale = get_locale();
-        if (!empty($current_locale)) {
-            $mo_file = dirname(__FILE__) . '/languages/wpfanyi-import-' . $current_locale . ".mo";
-            if (@file_exists($mo_file) && is_readable($mo_file)) {
-                load_textdomain('wpfanyi-import', $mo_file);
-            }
-        }
+		add_action( 'init', 'wpfanyi_load_textdomain' );
+		function wpfanyi_load_textdomain() {
+		load_plugin_textdomain( 'wpfanyi-import', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' ); 
+		}
 
         /** Load core */
         require_once 'core.php';
