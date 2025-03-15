@@ -1,0 +1,40 @@
+.tab-content {
+    margin-top: 20px;
+}
+
+.form-table th {
+    min-width: 140px;
+}
+
+#trans_url {
+    min-width: 28em;
+}
+
+@media screen and (max-width: 782px) {
+    #trans_url {
+        min-width: 22em;
+    }
+}
+
+.card details {
+    margin-bottom: 15px;
+}
+
+.card summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.card pre {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.card ul {
+    list-style: disc;
+    margin-left: 20px;
+}
